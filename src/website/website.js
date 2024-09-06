@@ -150,9 +150,7 @@ const DownloadPage = () => {
         <section id="benifit">
           <KeyBenefitsSection />
         </section>
-        <section id="tesimonial">
-          <TestimonialsSection />
-        </section>
+
         <section id="cases">
           <FeaturedUseCasesSection />
         </section>
