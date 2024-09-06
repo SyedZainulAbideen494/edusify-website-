@@ -1,129 +1,148 @@
 /* Modal Overlay */
 .modal-overlay-website {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* Slightly lighter for a less intense overlay */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  /* Modal Content */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Slightly lighter for a less intense overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px; /* Add padding to ensure it looks good on smaller screens */
+}
+
+/* Modal Content */
+.modal-content-website {
+  background: #fff; /* White background for light theme */
+  color: #333; /* Dark text color for readability */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90vw; /* Use relative units for responsive width */
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Modal Header */
+.modal-header-website {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.modal-header-website h2 {
+  margin: 0;
+  font-size: 4vw; /* Relative font size for responsiveness */
+  font-weight: 600;
+  color: #333;
+}
+
+/* Modal Body */
+.modal-body-website p {
+  font-size: 3vw; /* Relative font size for responsiveness */
+  color: #666;
+  margin: 0;
+}
+
+/* Modal Buttons */
+.modal-buttons-website {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
+}
+
+.modal-buttons-website button,
+.modal-buttons-website a {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 3vw; /* Relative font size for responsiveness */
+  transition: background 0.2s, transform 0.2s;
+  flex: 1 1 auto; /* Make buttons responsive */
+  margin: 5px; /* Add margin for better spacing */
+}
+
+/* Divider */
+.divider {
+  color: #999;
+  font-size: 3vw; /* Relative font size for responsiveness */
+}
+
+/* Android Button */
+.modal-buttons-website button.btn-android {
+  background: #333;
+  color: #fff;
+}
+
+.modal-buttons-website button.btn-android:hover {
+  background: #444;
+  transform: translateY(-1px);
+}
+
+/* iOS Button */
+.modal-buttons-website button.btn-ios {
+  background: #e0e0e0; /* Light grey for contrast */
+  color: #333;
+}
+
+.modal-buttons-website button.btn-ios:hover {
+  background: #ccc;
+  transform: translateY(-1px);
+}
+
+/* Web Button */
+.modal-buttons-website a.btn-web {
+  background: transparent;
+  color: #007bff; /* Light blue for contrast */
+  text-decoration: underline;
+}
+
+.modal-buttons-website a.btn-web:hover {
+  color: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* Modal Footer */
+.modal-footer-website {
+  margin-top: 20px;
+}
+
+.modal-close-website {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background: #ddd;
+  color: #333;
+  cursor: pointer;
+  font-size: 3vw; /* Relative font size for responsiveness */
+  transition: background 0.3s, transform 0.2s;
+}
+
+.modal-close-website:hover {
+  background: #ccc;
+  transform: translateY(-1px);
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
   .modal-content-website {
-    background: #fff; /* White background for light theme */
-    color: #333; /* Dark text color for readability */
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 400px; /* Adjusted for a cleaner look */
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow */
-    position: relative;
-    overflow: hidden;
+    max-width: 400px; /* Fixed width for larger screens */
   }
   
-  /* Modal Header */
-  .modal-header-website {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .modal-header-website h2 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-  }
-  
-  /* Modal Body */
-  .modal-body-website p {
-    font-size: 14px;
-    color: #666;
-    margin: 0;
-  }
-  
-  /* Modal Buttons */
-  .modal-buttons-website {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  
+  .modal-header-website h2,
+  .modal-body-website p,
   .modal-buttons-website button,
-  .modal-buttons-website a {
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background 0.2s, transform 0.2s;
-  }
-  
-  /* Divider */
+  .modal-buttons-website a,
+  .modal-close-website,
   .divider {
-    color: #999;
-    font-size: 14px;
+    font-size: 16px; /* Adjust font size for larger screens */
   }
-  
-  /* Android Button */
-  .modal-buttons-website button.btn-android {
-    background: #333;
-    color: #fff;
-  }
-  
-  .modal-buttons-website button.btn-android:hover {
-    background: #444;
-    transform: translateY(-1px);
-  }
-  
-  /* iOS Button */
-  .modal-buttons-website button.btn-ios {
-    background: #e0e0e0; /* Light grey for contrast */
-    color: #333;
-  }
-  
-  .modal-buttons-website button.btn-ios:hover {
-    background: #ccc;
-    transform: translateY(-1px);
-  }
-  
-  /* Web Button */
-  .modal-buttons-website a.btn-web {
-    background: transparent;
-    color: #007bff; /* Light blue for contrast */
-    text-decoration: underline;
-  }
-  
-  .modal-buttons-website a.btn-web:hover {
-    color: #0056b3;
-    transform: translateY(-1px);
-  }
-  
-  /* Modal Footer */
-  .modal-footer-website {
-    margin-top: 20px;
-  }
-  
-  .modal-close-website {
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    background: #ddd;
-    color: #333;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background 0.3s, transform 0.2s;
-  }
-  
-  .modal-close-website:hover {
-    background: #ccc;
-    transform: translateY(-1px);
-  }
-  
+}

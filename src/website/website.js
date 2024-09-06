@@ -120,13 +120,6 @@ const DownloadPage = () => {
             <a href="#features" onClick={() => scrollToSection('features')}>Features</a>
             <a href="#pricing" onClick={() => scrollToSection('plan')}>Pricing</a>
             <a href="#testimonials" onClick={() => scrollToSection('tesimonial')}>Testimonials</a>
-            <a onClick={openModal} style={{ cursor: 'pointer' }}>Get Started for Free</a>
-            <Link to='/sign-up'>
-              <a className="highlighted" style={{ color: 'white' }}>Sign Up</a>
-            </Link>
-            <Link to='/login'>
-              <a>Login</a>
-            </Link>
           </nav>
           
           <div className="burger-menu" onClick={toggleMenu}>
@@ -138,13 +131,12 @@ const DownloadPage = () => {
 
         <section className="hero">
           <div className="hero-content">
-            <h1>Master Your Studies with Edusify</h1>
+            <h1>Download Now!</h1>
             <p>The ultimate study tool for productivity and success.</p>
             <div className="hero-buttons">
-              <a href="#signup" className="btn-primary" onClick={openModal}>Get Started for Free</a>
-              <Link to='/sign-up'>
-              <button className="btn-secondary">Sign up</button>
-              </Link>
+              <a className="btn-primary" onClick={handleDownloadAndroid}>Android</a>
+
+              <button className="btn-secondary" onClick={handleDownloadIOS}>Sign up</button>
             </div>
           </div>
         </section>
