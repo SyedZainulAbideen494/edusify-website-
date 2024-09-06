@@ -136,7 +136,7 @@ const DownloadPage = () => {
             <div className="hero-buttons">
               <a className="btn-primary" onClick={handleDownloadAndroid}>Android</a>
 
-              <button className="btn-secondary" onClick={handleDownloadIOS}>Sign up</button>
+              <button className="btn-secondary" onClick={handleDownloadIOS}>IOS</button>
             </div>
           </div>
         </section>
