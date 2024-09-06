@@ -1,0 +1,32 @@
+/* Keyframes for popup animation */
+@keyframes popup {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.8); /* Start below and scaled down */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1); /* End at original position and scale */
+    }
+}
+
+.success-message-sucess-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the modal */
+    background-color: #000000; /* Black background */
+    color: white;
+    padding: 10px;
+    opacity: 1;
+    border-radius: 15px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000; /* Ensure it's above other elements */
+    animation: popup 0.3s ease-out;
+}
+
+.success-message-sucess-modal.hide {
+    animation: none; /* Disable animation for hiding */
+    opacity: 0; /* Hide the modal */
+    transform: translate(-50%, 20px) scale(0.8); /* Move down and scale */
+}

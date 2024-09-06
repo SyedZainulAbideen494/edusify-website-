@@ -1,0 +1,204 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.logo a {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-menu a {
+  margin: 0 20px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #000;
+}
+
+.nav-menu .highlighted {
+  color: #fff;
+  background-color: #000;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+}
+
+.burger-menu .bar {
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+  margin: 4px 0;
+}
+
+.nav-menu.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 280px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.nav-menu.open a {
+  margin: 10px 0;
+  color: #333;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 80vh;
+  background: url('../images/Edusify-banner.png') no-repeat center center/cover;
+  color: #fff;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+}
+
+.hero-buttons .btn-primary {
+  padding: 15px 30px;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-right: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-buttons .btn-primary:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.hero-buttons .btn-secondary {
+  padding: 15px 30px;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-buttons .btn-secondary:hover {
+  border-color: #f0f0f0;
+  color: #f0f0f0;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .burger-menu {
+    width: 28px;
+    height: 22px;
+  }
+
+  .burger-menu .bar {
+    height: 3px;
+    margin: 3px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+

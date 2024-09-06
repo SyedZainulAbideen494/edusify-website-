@@ -1,0 +1,108 @@
+.testimonials-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 1200px; /* Center align the section */
+  }
+  
+  .testimonials-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .testimonials-carousel .slick-list {
+    margin: 0 auto;
+  }
+  
+  .testimonials-carousel .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .testimonials-carousel .testimonial-card {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .testimonials-carousel .testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+  }
+  
+  .testimonial-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+  }
+  
+  .testimonial-quote {
+    font-size: 1.2rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 20px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .testimonial-rating {
+    margin-bottom: 20px;
+  }
+  
+  .testimonial-name {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 600;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .slick-dots {
+    display: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .testimonials-section {
+      padding: 40px 20px;
+    }
+  
+    .testimonial-card {
+      padding: 30px 15px;
+      width: 90%;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+  
+    .testimonials-section h2 {
+      font-size: 2rem;
+    }
+  
+    .testimonial-quote {
+      font-size: 1rem;
+      max-width: 90%;
+    }
+  
+    .testimonial-photo {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .testimonial-name {
+      font-size: 1rem;
+      max-width: 90%;
+    }
+  }

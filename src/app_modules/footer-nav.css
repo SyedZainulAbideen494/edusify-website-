@@ -1,0 +1,125 @@
+.footer-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px); /* Add spacing on the left and right */
+    background: rgba(18, 18, 18, 0.9); /* Dark theme with slightly transparent dark color */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px; /* Add padding */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Elevated effect with larger shadow */
+    margin-bottom: 10px;
+    border-radius: 20px;
+    z-index: 1000;
+    transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.nav-btn-footer-nav {
+    background: none;
+    border: none;
+    color: #f0f0f0;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* For active path effect */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease, background 0.3s ease; /* Smooth color and background transition */
+}
+
+.nav-btn-footer-nav.active {
+    color: #a38dff; /* Highlight color for the active state */
+}
+
+.nav-btn-footer-nav.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background: #a38dff; /* Highlight color */
+    transition: width 0.3s ease; /* Smooth underline transition */
+}
+
+.nav-btn-footer-nav:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.icon-footer-nav {
+    font-size: 24px; /* Larger icons for better visibility */
+    transition: transform 0.3s ease; /* Smooth icon scaling */
+}
+
+.nav-btn-footer-nav:hover .icon-footer-nav {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+.btn-label {
+    font-size: 12px; /* Adjust font size */
+    margin-top: 5px; /* Space between icon and text */
+}
+
+.popup-menu-footer-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    width: 100%;
+    max-width: 350px;
+    background: rgba(24, 24, 24, 0.9); /* Dark theme with slightly transparent dark color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Elevated effect with larger shadow */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transform and opacity transition */
+    opacity: 0; /* Initially hidden */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.popup-menu-footer-nav.show-footer-nav {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1; /* Fade in */
+}
+
+.close-btn-footer-nav {
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    background-color: transparent;
+    font-size: 16px;
+    transition: color 0.3s ease; /* Smooth color transition */
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+}
+
+.close-btn-footer-nav:hover {
+    color: #ff4d4d; /* Highlight color on hover */
+}
+
+@media (max-width: 768px) {
+    .nav-btn-footer-nav {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .icon-footer-nav {
+        font-size: 20px;
+    }
+
+    .btn-label {
+        font-size: 10px;
+    }
+}
