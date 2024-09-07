@@ -11,57 +11,6 @@ import FeaturedUseCasesSection from './FeaturedUseCasesSection';
 import Modal from './Modal'; // Import the Modal component
 import Footer from './Footer';
 
-const handleDownloadAndroid = async () => {
-  const url = API_ROUTES.downloadAndroid;
-  const response = await fetch(url, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/octet-stream',
-    },
-  });
-
-  if (!response.ok) {
-    console.error('Failed to download Android file');
-    return;
-  }
-
-  const blob = await response.blob();
-  const fileName = 'Edusify.apk'; // Replace with your file name
-  const downloadUrl = window.URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = downloadUrl;
-  a.download = fileName;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-};
-
-
-const handleDownloadIOS = async () => {
-  const url = API_ROUTES.downloadIOS;
-  const response = await fetch(url, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/octet-stream',
-    },
-  });
-
-  if (!response.ok) {
-    console.error('Failed to download iOS file');
-    return;
-  }
-
-  const blob = await response.blob();
-  const fileName = 'Educify.shortcut'; // Replace with your file name
-  const downloadUrl = window.URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = downloadUrl;
-  a.download = fileName;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-};
-
 // Check token and redirect
 const checkTokenAndRedirect = async (token, navigate) => {
   try {
@@ -119,7 +68,7 @@ const DownloadPage = () => {
           <nav className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
             <a href="#features" onClick={() => scrollToSection('features')}>Features</a>
             <a href="#pricing" onClick={() => scrollToSection('plan')}>Pricing</a>
-            <a href="#testimonials" onClick={() => scrollToSection('tesimonial')}>Testimonials</a>
+            <a href="#testimonials" onClick={() => scrollToSection('testimonials')}>Testimonials</a>
           </nav>
           
           <div className="burger-menu" onClick={toggleMenu}>
@@ -134,9 +83,23 @@ const DownloadPage = () => {
             <h1>Download Now!</h1>
             <p>The ultimate study tool for productivity and success.</p>
             <div className="hero-buttons">
-              <a className="btn-primary" onClick={handleDownloadAndroid}>Android</a>
+              {/* Use direct download link for Android */}
+              <a
+                href={API_ROUTES.downloadAndroid}
+                className="btn-primary"
+                download="Edusify.apk" // Replace with your Android file name
+              >
+                Download Android
+              </a>
 
-              <button className="btn-secondary" onClick={handleDownloadIOS}>IOS</button>
+              {/* Use direct download link for iOS */}
+              <a
+                href={API_ROUTES.downloadIOS}
+                className="btn-secondary"
+                download="Educify.shortcut" // Replace with your iOS file name
+              >
+                Download iOS
+              </a>
             </div>
           </div>
         </section>
@@ -147,7 +110,7 @@ const DownloadPage = () => {
         <section id="plan">
           <PricingSection />
         </section>
-        <section id="benifit">
+        <section id="benefit">
           <KeyBenefitsSection />
         </section>
 
