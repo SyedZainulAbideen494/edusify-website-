@@ -71,7 +71,7 @@ const Modal = ({ isOpen, onClose }) => {
           <span className="divider">or</span>
           <button className="btn-android" onClick={handleDownloadIOS}>Download for IOS</button>
           <span className="divider">or</span>
-          <a href='/sign-up' className="btn-web">Use on Web</a>
+          <a href='https://edusify.vercel.app/sign-up' className="btn-web">Use on Web</a>
         </div>
         <footer className="modal-footer-website">
           <button className="modal-close-website" onClick={onClose}>Close</button>

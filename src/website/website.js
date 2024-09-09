@@ -80,26 +80,16 @@ const DownloadPage = () => {
 
         <section className="hero">
           <div className="hero-content">
-            <h1>Download Now!</h1>
+            <h1>Get Started Now!</h1>
             <p>The ultimate study tool for productivity and success.</p>
             <div className="hero-buttons">
-              {/* Use direct download link for Android */}
-              <a
-                href={API_ROUTES.downloadAndroid}
+              {/* Replace the download buttons with a "Get Started" button */}
+              <button
                 className="btn-primary"
-                download="Edusify.apk" // Replace with your Android file name
+                onClick={openModal}
               >
-                Download Android
-              </a>
-
-              {/* Use direct download link for iOS */}
-              <a
-                href={API_ROUTES.downloadIOS}
-                className="btn-secondary"
-                download="Educify.shortcut" // Replace with your iOS file name
-              >
-                Download iOS
-              </a>
+                Get Started
+              </button>
             </div>
           </div>
         </section>
