@@ -46,11 +46,7 @@ const PricingSection = () => {
               <li key={index}>✔️ {feature}</li>
             ))}
           </ul>
-          <Link to="/sign-up">
-            <span className="cta-btn">
-              Select Free Plan
-            </span>
-          </Link>
+        
         </div>
 
         {/* Premium Plan */}
@@ -62,11 +58,7 @@ const PricingSection = () => {
               <li key={index}>✔️ {feature}</li>
             ))}
           </ul>
-          <Link to="/sign-up">
-            <span className="cta-btn">
-              Select Premium Plan
-            </span>
-          </Link>
+          
         </div>
       </div>
     </section>
