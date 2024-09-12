@@ -63,7 +63,7 @@ const DownloadPage = () => {
       <div className="App">
         <header className="header">
           <div className="logo">
-            <a href="/">Edusify</a>
+            <a href="/" style={{textDecoration: 'none'}}>Edusify</a>
           </div>
           <nav className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
             <a href="#features" onClick={() => scrollToSection('features')}>Features</a>
