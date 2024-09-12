@@ -1,148 +1,138 @@
 /* Modal Overlay */
-.modal-overlay-website {
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4); /* Slightly lighter for a less intense overlay */
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for focus */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  padding: 20px; /* Add padding to ensure it looks good on smaller screens */
+  padding: 20px;
 }
 
 /* Modal Content */
-.modal-content-website {
-  background: #fff; /* White background for light theme */
-  color: #333; /* Dark text color for readability */
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 90vw; /* Use relative units for responsive width */
+.modal-content {
+  background: #ffffff; /* Clean white background */
+  color: #333333; /* Dark text for readability */
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 90vw;
   width: 100%;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Softer shadow for a floating effect */
   position: relative;
-  overflow: hidden;
 }
 
 /* Modal Header */
-.modal-header-website {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
-  margin-bottom: 15px;
+.modal-header {
+  border-bottom: 1px solid #e0e0e0; /* Light gray border */
+  padding-bottom: 16px;
+  margin-bottom: 24px;
 }
 
-.modal-header-website h2 {
+.modal-header h2 {
   margin: 0;
-  font-size: 4vw; /* Relative font size for responsiveness */
+  font-size: 1.5rem; /* Larger font size for readability */
   font-weight: 600;
-  color: #333;
+  color: #444444; /* Slightly darker text for contrast */
 }
 
 /* Modal Body */
-.modal-body-website p {
-  font-size: 3vw; /* Relative font size for responsiveness */
-  color: #666;
+.modal-body p {
+  font-size: 1rem;
+  color: #666666; /* Mid-tone gray for readability */
   margin: 0;
 }
 
 /* Modal Buttons */
-.modal-buttons-website {
+.modal-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 16px;
   margin-top: 20px;
-  flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
+  flex-wrap: wrap;
 }
 
-.modal-buttons-website button,
-.modal-buttons-website a {
-  padding: 8px 15px;
+.modal-buttons .btn {
+  padding: 12px 24px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 3vw; /* Relative font size for responsiveness */
-  transition: background 0.2s, transform 0.2s;
-  flex: 1 1 auto; /* Make buttons responsive */
-  margin: 5px; /* Add margin for better spacing */
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.3s;
+  text-decoration: none; /* Remove underline from links */
 }
 
 /* Divider */
 .divider {
-  color: #999;
-  font-size: 3vw; /* Relative font size for responsiveness */
+  color: #b0b0b0; /* Light gray for divider */
+  font-size: 1rem;
 }
 
 /* Android Button */
-.modal-buttons-website button.btn-android {
-  background: #333;
-  color: #fff;
+.btn-android {
+  background: #00796b; /* Deep teal for a professional look */
+  color: #ffffff;
 }
 
-.modal-buttons-website button.btn-android:hover {
-  background: #444;
-  transform: translateY(-1px);
+.btn-android:hover {
+  background: #004d40; /* Darker teal on hover */
+  transform: translateY(-2px);
 }
 
 /* iOS Button */
-.modal-buttons-website button.btn-ios {
-  background: #e0e0e0; /* Light grey for contrast */
-  color: #333;
+.btn-ios {
+  background: #f57c00; /* Warm orange for attention */
+  color: #ffffff;
 }
 
-.modal-buttons-website button.btn-ios:hover {
-  background: #ccc;
-  transform: translateY(-1px);
+.btn-ios:hover {
+  background: #e64a19; /* Darker orange on hover */
+  transform: translateY(-2px);
 }
 
 /* Web Button */
-.modal-buttons-website a.btn-web {
-  background: transparent;
-  color: #007bff; /* Light blue for contrast */
-  text-decoration: underline;
+.btn-web {
+  background: #007bff; /* Classic blue for web use */
+  color: #ffffff;
+  border: 1px solid #007bff; /* Blue border to match button background */
 }
 
-.modal-buttons-website a.btn-web:hover {
-  color: #0056b3;
-  transform: translateY(-1px);
+.btn-web:hover {
+  background: #0056b3; /* Darker blue on hover */
+  border-color: #0056b3; /* Match border color with background on hover */
+  transform: translateY(-2px);
 }
 
 /* Modal Footer */
-.modal-footer-website {
+.modal-footer {
   margin-top: 20px;
 }
 
-.modal-close-website {
-  padding: 8px 15px;
+.modal-close {
+  padding: 10px 20px;
   border: none;
-  border-radius: 5px;
-  background: #ddd;
-  color: #333;
+  border-radius: 8px;
+  background: #cccccc; /* Light gray for the close button */
+  color: #333333;
   cursor: pointer;
-  font-size: 3vw; /* Relative font size for responsiveness */
-  transition: background 0.3s, transform 0.2s;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.3s;
 }
 
-.modal-close-website:hover {
-  background: #ccc;
-  transform: translateY(-1px);
+.modal-close:hover {
+  background: #999999; /* Darker gray on hover */
+  transform: translateY(-2px);
 }
 
 /* Responsive Adjustments */
 @media (min-width: 768px) {
-  .modal-content-website {
-    max-width: 400px; /* Fixed width for larger screens */
-  }
-  
-  .modal-header-website h2,
-  .modal-body-website p,
-  .modal-buttons-website button,
-  .modal-buttons-website a,
-  .modal-close-website,
-  .divider {
-    font-size: 16px; /* Adjust font size for larger screens */
+  .modal-content {
+    max-width: 500px;
   }
 }
+

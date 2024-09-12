@@ -6,19 +6,19 @@ const Modal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="modal-overlay-website" onClick={onClose}>
-      <div className="modal-content-website" onClick={(e) => e.stopPropagation()}>
-        <header className="modal-header-website">
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <header className="modal-header">
           <h2>Get Started with Edusify</h2>
         </header>
-        <div className="modal-body-website">
+        <div className="modal-body">
           <p>Select your preferred platform to start using Edusify:</p>
         </div>
-        <div className="modal-buttons-website">
+        <div className="modal-buttons">
           {/* Android Download Button */}
           <a
             href={API_ROUTES.downloadAndroid}
-            className="btn-android"
+            className="btn btn-android"
             download="Edusify.apk"
           >
             Download for Android
@@ -29,8 +29,8 @@ const Modal = ({ isOpen, onClose }) => {
           {/* iOS Download Button */}
           <a
             href={API_ROUTES.downloadIOS}
-            className="btn-android"
-            download="Educify.shortcut"
+            className="btn btn-ios"
+            download="Edusify.shortcut"
           >
             Download for iOS
           </a>
@@ -40,13 +40,13 @@ const Modal = ({ isOpen, onClose }) => {
           {/* Use on Web Button */}
           <a
             href='https://edusify.vercel.app/sign-up'
-            className="btn-web"
+            className="btn btn-web"
           >
             Use on Web
           </a>
         </div>
-        <footer className="modal-footer-website">
-          <button className="modal-close-website" onClick={onClose}>Close</button>
+        <footer className="modal-footer">
+          <button className="modal-close" onClick={onClose}>Close</button>
         </footer>
       </div>
     </div>
