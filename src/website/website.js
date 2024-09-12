@@ -79,20 +79,23 @@ const DownloadPage = () => {
         </header>
 
         <section className="hero">
-          <div className="hero-content">
-            <h1>Get Started Now!</h1>
-            <p>The ultimate study tool for productivity and success.</p>
-            <div className="hero-buttons">
-              {/* Replace the download buttons with a "Get Started" button */}
-              <button
-                className="btn-primary"
-                onClick={openModal}
-              >
-                Get Started
-              </button>
-            </div>
-          </div>
-        </section>
+  <div className="hero-content">
+    <h1>Transform Your Study Routine</h1>
+    <p>Maximize your productivity and achieve your goals with the ultimate study tool.</p>
+    <div className="hero-buttons">
+      <button className="btn-primary" onClick={openModal}>Get Started</button>
+      <a 
+        href="#features" 
+        onClick={() => scrollToSection('features')} 
+        className="btn-learn-more"
+      >
+        Learn More
+      </a>
+    </div>
+  </div>
+</section>
+
+
 
         <section id="features">
           <FeaturesOverview />
