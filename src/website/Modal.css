@@ -75,38 +75,56 @@
 
 /* Android Button */
 .btn-android {
-  background: #00796b; /* Deep teal for a professional look */
-  color: #ffffff;
+  background: #ffffff; /* White background for a clean look */
+  color: #333333; /* Dark text for readability */
+  border: 1px solid #d0d0d0; /* Light gray border for subtlety */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  padding: 12px 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background 0.3s, border-color 0.3s, transform 0.3s;
 }
 
 .btn-android:hover {
-  background: #004d40; /* Darker teal on hover */
+  background: #f0f0f0; /* Slightly darker gray on hover */
+  border-color: #b0b0b0; /* Darker gray border on hover */
   transform: translateY(-2px);
 }
 
 /* iOS Button */
 .btn-ios {
-  background: #f57c00; /* Warm orange for attention */
-  color: #ffffff;
+  background: #ffffff; /* White background for a clean look */
+  color: #333333; /* Dark text for readability */
+  border: 1px solid #d0d0d0; /* Light gray border for subtlety */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  padding: 12px 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background 0.3s, border-color 0.3s, transform 0.3s;
 }
 
 .btn-ios:hover {
-  background: #e64a19; /* Darker orange on hover */
+  background: #f0f0f0; /* Slightly darker gray on hover */
+  border-color: #b0b0b0; /* Darker gray border on hover */
   transform: translateY(-2px);
 }
 
 /* Web Button */
 .btn-web {
-  background: #007bff; /* Classic blue for web use */
-  color: #ffffff;
-  border: 1px solid #007bff; /* Blue border to match button background */
+  background: #ffffff; /* White background for a clean look */
+  color: #007aff; /* Apple blue color for web use */
+  border: 1px solid #007aff; /* Matching border color */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  padding: 12px 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background 0.3s, border-color 0.3s, color 0.3s, transform 0.3s;
 }
 
 .btn-web:hover {
-  background: #0056b3; /* Darker blue on hover */
-  border-color: #0056b3; /* Match border color with background on hover */
+  background: #e0e0e0; /* Slightly darker gray on hover */
+  border-color: #0051a8; /* Darker blue border on hover */
+  color: #0051a8; /* Darker blue text on hover */
   transform: translateY(-2px);
 }
+
 
 /* Modal Footer */
 .modal-footer {
