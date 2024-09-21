@@ -1,91 +1,166 @@
+/* Section Styling */
 .key-benefits-section {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #121212; /* Dark background */
-    border-radius: 20px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Darker shadow for a more premium feel */
-    margin: 50px 0; /* Consistent margin with other sections */
-  }
-  
-  .key-benefits-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #ffffff; /* White text for contrast */
-    font-weight: 700;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  .intro-text {
-    font-size: 1.2rem;
-    color: #b3b3b3; /* Light gray for better readability on dark background */
-    margin-bottom: 40px;
-  }
-  
-  .benefits-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .benefit-item {
-    background-color: #1e1e1e; /* Darker gray background for cards */
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Darker shadow for better depth */
-    padding: 20px;
-    max-width: 250px;
-    text-align: center;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-  }
-  
-  .benefit-item:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
-    transform: translateY(-5px); /* Slight lift effect on hover */
-  }
-  
-  .benefit-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 15px;
-    color: #007aff; /* Blue accent color */
-  }
-  
-  .benefit-item h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    color: #ffffff; /* White text for headings */
-  }
-  
-  .benefit-item p {
-    font-size: 1rem;
-    color: #b3b3b3; /* Light gray for text */
-  }
-  
-  .cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    margin-top: 40px;
-    background-color: #007aff; /* Blue background for call-to-action button */
-    color: #ffffff; /* White text */
-    border-radius: 30px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 600;
-    transition: background-color 0.4s ease, transform 0.4s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #0051a8; /* Darker blue for hover effect */
-    transform: scale(1.05);
-  }
-  
-  @media screen and (max-width: 768px) {
-    .benefits-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .benefit-item {
-      max-width: 90%;
-    }
-  }
+  background-color: #121212; /* Dark background for contrast */
+  color: #f5f5f5; /* Light text for readability */
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+}
+
+/* Heading Styling */
+.key-benefits-section h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+  background: linear-gradient(90deg, #ff8a00, #e52e71); /* Gradient heading */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.key-benefits-section h2.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Intro Text Styling */
+.key-benefits-section .intro-text {
+  font-size: 1.4rem;
+  color: #dddddd;
+  margin-bottom: 50px;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.intro-text.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Benefits Container */
+.benefits-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Card Styling From Uiverse.io by suleymanlaarabidev */
+.benefit-item {
+  width: 190px;
+  height: 254px;
+  background: rgb(103, 225, 255);
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+  position: relative;
+  margin: auto;
+}
+
+.benefit-item:hover {
+  border-radius: 15px;
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.705);
+  background: rgb(103, 151, 255);
+}
+
+/* First content (title) */
+.first-content {
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.benefit-item:hover .first-content {
+  height: 0px;
+  opacity: 0;
+}
+
+/* Second content (details) */
+.second-content {
+  height: 0%;
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: all 0.4s;
+  font-size: 10px;
+  transform: rotate(90deg) scale(-1);
+  text-align: center;
+}
+
+.benefit-item:hover .second-content {
+  opacity: 1;
+  height: 100%;
+  font-size: 17px;
+  transform: rotate(0deg);
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  margin-top: 60px;
+  padding: 15px 40px;
+  background: linear-gradient(to right, #ff8a00, #e52e71);
+  color: #ffffff;
+  font-size: 1.3rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #e52e71, #ff8a00);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Scroll Animations */
+.fade-in, .fade-in-left {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-left {
+  transform: translateX(-50px);
+}
+
+/* Add this class to make sure the button is animated when it comes into view */
+.cta-button.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Scroll Animations */
+.fade-in, .fade-in-left {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-left {
+  transform: translateX(-50px);
+}
+
