@@ -60,9 +60,11 @@
 /* Modal Buttons */
 .modal-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center buttons horizontally */
+  align-items: center; /* Center buttons vertically */
   margin-top: 20px;
   flex-wrap: wrap;
+  gap: 16px; /* Adjust spacing between buttons */
 }
 
 /* Button Styles */
@@ -75,8 +77,6 @@
   text-decoration: none;
   transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
-
-
 
 
 /* Modal Footer */
