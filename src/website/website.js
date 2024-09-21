@@ -68,7 +68,6 @@ const DownloadPage = () => {
           <nav className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
             <a href="#features" onClick={() => scrollToSection('features')}>Features</a>
             <a href="#pricing" onClick={() => scrollToSection('plan')}>Pricing</a>
-            <a href="#testimonials" onClick={() => scrollToSection('testimonials')}>Testimonials</a>
           </nav>
           
           <label className="hamburger">
@@ -91,8 +90,7 @@ const DownloadPage = () => {
   </div>
 </button>
       <a 
-        href="#features" 
-        onClick={() => scrollToSection('features')} 
+         href="#features" onClick={() => scrollToSection('features')}
       >
       <button className="cssbuttons-io-button"> Learn more!
   <div className="icon">
