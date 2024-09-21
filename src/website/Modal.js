@@ -67,7 +67,8 @@ const Modal = ({ isOpen, onClose }) => {
 <a href='https://edusify.vercel.app/sign-up' className="btn-shine">Use on Web</a>
           </div>
           <footer className="modal-footer">
-            <button className="modal-close" onClick={onClose}>Close</button>
+
+           {/* <button className="modal-close" onClick={onClose}>x</button> */}
           </footer>
         </div>
       </div>
