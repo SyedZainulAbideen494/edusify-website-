@@ -68,6 +68,7 @@ const DownloadPage = () => {
           <nav className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
             <a href="#features" onClick={() => scrollToSection('features')}>Features</a>
             <a href="#pricing" onClick={() => scrollToSection('plan')}>Pricing</a>
+            <a onClick={openModal}>Get Started</a>
           </nav>
           
           <label className="hamburger">
