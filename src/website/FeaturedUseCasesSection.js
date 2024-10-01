@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './FeaturedUseCasesSection.css';
 
-const FeaturedUseCasesSection = () => {
+const FeaturedUseCasesSection = ({ onStartJourney }) => { // Accept the onStartJourney prop
   useEffect(() => {
     const revealOnScroll = () => {
       const elementsToReveal = document.querySelectorAll('.fade-in__user__cases');
@@ -55,7 +55,7 @@ const FeaturedUseCasesSection = () => {
           </div>
         ))}
       </div>
-      <a href="#features" className="cta-button fade-in__user__cases">Start Your Journey</a>
+      <button className="cta-button fade-in__user__cases" onClick={onStartJourney}>Start Your Journey</button> {/* Use the onStartJourney function */}
     </section>
   );
 };
