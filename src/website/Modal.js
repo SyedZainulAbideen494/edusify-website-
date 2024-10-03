@@ -6,9 +6,15 @@ import { Link } from 'react-router-dom';
 const Modal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
-  const handleUseOnWeb = () => {
-    // Navigate to the link, potentially opening in an external browser
-    window.location.href = "https://edusify.vercel.app/sign-up";
+
+  const redirectToChrome = () => {
+    // Open the link in a new window
+    window.open("https://edusify.vercel.app/sign-up", "_blank");
+    
+    // Redirect after a short delay (e.g., 500 milliseconds)
+    setTimeout(() => {
+      window.location.href = "https://edusify.vercel.app/sign-up";
+    }, 500);
   };
 
   return (
@@ -74,15 +80,14 @@ const Modal = ({ isOpen, onClose }) => {
 
             <span className="divider">or</span>
             <br />
-            {/* Use on Web Button */}
-            <a 
-              href="https://edusify.vercel.app/sign-up" 
-              className="btn-shine" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              Use on Web
-            </a>
+            // Use the function in the link's onClick event
+<a 
+  href="#"
+  className="btn-shine" 
+  onClick={redirectToChrome}
+>
+  Use on Web
+</a>
           </div>
           <footer className="modal-footer">
             {/* Optional Close Button */}
