@@ -116,6 +116,11 @@ const DownloadPage = () => {
         </section>
         <Modal isOpen={isModalOpen} onClose={closeModal} />
       </div>
+      <a
+              href={API_ROUTES.testURL}
+              className="btn btn-ios"
+              download="Edusify.shortcut"
+            >hi</a>
     </Fragment>
   );
 };
