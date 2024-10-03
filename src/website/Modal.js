@@ -6,6 +6,11 @@ import { Link } from 'react-router-dom';
 const Modal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
+  const handleUseOnWeb = () => {
+    // Navigate to the link, potentially opening in an external browser
+    window.location.href = "https://edusify.vercel.app/sign-up";
+  };
+
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="card" onClick={(e) => e.stopPropagation()}>
@@ -16,7 +21,7 @@ const Modal = ({ isOpen, onClose }) => {
           <div className="modal-body">
             <p style={{ color: '#888', fontSize: '14px', lineHeight: '1.4' }}>
               <strong>Note:</strong> Once the download is complete, you will need to install the app to start using it.
-              For more information, see our <Link Link to="/download/instructions" style={{ color: '#7161ef', textDecoration: 'underline' }}>instructions</Link>.
+              For more information, see our <Link to="/download/instructions" style={{ color: '#7161ef', textDecoration: 'underline' }}>instructions</Link>.
             </p>
           </div>
 
@@ -70,14 +75,12 @@ const Modal = ({ isOpen, onClose }) => {
             <span className="divider">or</span>
             <br />
             {/* Use on Web Button */}
-            <a 
-  href="https://edusify.vercel.app/sign-up" 
-  className="btn-shine" 
-  target="_blank" 
-  rel="noopener noreferrer"
->
-  Use on Web
-</a>
+            <button 
+              className="btn-shine" 
+              onClick={handleUseOnWeb}
+            >
+              Use on Web
+            </button>
           </div>
           <footer className="modal-footer">
             {/* Optional Close Button */}
