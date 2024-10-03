@@ -13,8 +13,11 @@ const Modal = ({ isOpen, onClose }) => {
             <h2>Get Started with Edusify</h2>
           </header>
           <div className="modal-body">
-            <p>Select your preferred platform to start using Edusify:</p>
-          </div>
+          <p style={{ color: '#888', fontSize: '14px', lineHeight: '1.4' }}>
+    <strong>Note:</strong> Once the download is complete, you will need to install the app to start using it.
+  </p>
+</div>
+
 
           <div className="modal-buttons">
             {/* Android Download Button */}
