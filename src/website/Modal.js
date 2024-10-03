@@ -70,7 +70,17 @@ const Modal = ({ isOpen, onClose }) => {
             <span className="divider">or</span>
             <br />
             {/* Use on Web Button */}
-            <a href="https://edusify.vercel.app/sign-up" className="btn-shine">Use on Web</a>
+            <a
+  href="https://edusify.vercel.app/sign-up"
+  className="btn-shine"
+  onClick={(e) => {
+    e.preventDefault(); // Prevent the default anchor behavior
+    const url = 'https://edusify.vercel.app/sign-up';
+    window.open(url, '_system'); // Try to open in the default system browser
+  }}
+>
+  Use on Web
+</a>
           </div>
           <footer className="modal-footer">
             {/* Optional Close Button */}
