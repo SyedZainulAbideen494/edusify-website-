@@ -80,7 +80,7 @@ const Modal = ({ isOpen, onClose }) => {
 
             <span className="divider">or</span>
             <br />
-            // Use the function in the link's onClick event
+  
 <a 
   href="#"
   className="btn-shine" 
