@@ -455,3 +455,19 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+.user-count {
+  font-size: 1.2em; /* Slightly larger size for emphasis */
+  color: #fff; /* Change text color to white for better contrast */
+  margin-bottom: 30px; /* Space before buttons */
+  font-weight: bold; /* Make it bold */
+  padding: 15px 20px; /* Add padding for better spacing */
+  border-radius: 8px; /* Rounded corners */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Transition for hover effects */
+}
+
+.user-count:hover {
+  transform: translateY(-3px); /* Slight lift on hover */
+}
