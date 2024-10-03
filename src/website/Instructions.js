@@ -1,5 +1,6 @@
 import React from 'react';
 import './instructions.css';
+import { API_ROUTES } from '../app_modules/apiRoutes';
 
 const Instructions = () => {
   return (
@@ -9,8 +10,8 @@ const Instructions = () => {
 
       <h2>Step 1: Choose Your Platform</h2>
       <ul>
-        <li><strong>Android:</strong> <a href="https://dropment.online/download/android" download="Edusify.apk">Download here</a></li>
-        <li><strong>iOS:</strong> <a href="https://dropment.online/download/ios" download="Edusify.shortcut">Download here</a></li>
+        <li><strong>Android:</strong> <a href={API_ROUTES.downloadAndroid} download="Edusify.apk">Download here</a></li>
+        <li><strong>iOS:</strong> <a href={API_ROUTES.downloadIOS} download="Edusify.shortcut">Download here</a></li>
         <li><strong>Web:</strong> <a href="https://edusify.vercel.app/sign-up">Use on the web</a></li>
       </ul>
 
