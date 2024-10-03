@@ -75,7 +75,7 @@ const Modal = ({ isOpen, onClose }) => {
             <span className="divider">or</span>
             <br />
             {/* Use on Web Button */}
-            <button 
+            <button  style={{border: 'none'}}
               className="btn-shine" 
               onClick={handleUseOnWeb}
             >
