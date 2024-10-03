@@ -75,12 +75,14 @@ const Modal = ({ isOpen, onClose }) => {
             <span className="divider">or</span>
             <br />
             {/* Use on Web Button */}
-            <button  style={{border: 'none'}}
+            <a 
+              href="https://edusify.vercel.app/sign-up" 
               className="btn-shine" 
-              onClick={handleUseOnWeb}
+              target="_blank" 
+              rel="noopener noreferrer"
             >
               Use on Web
-            </button>
+            </a>
           </div>
           <footer className="modal-footer">
             {/* Optional Close Button */}
