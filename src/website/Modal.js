@@ -8,14 +8,12 @@ const Modal = ({ isOpen, onClose }) => {
 
 
   const redirectToChrome = () => {
-    // Open the link in a new window
-    window.open("https://edusify.vercel.app/sign-up", "_blank");
+      const url = "https://edusify.vercel.app/sign-up";
+      const chromeUrl = `googlechrome://${url}`;
+      
+      window.location.href = chromeUrl;
+    };
     
-    // Redirect after a short delay (e.g., 500 milliseconds)
-    setTimeout(() => {
-      window.location.href = "https://edusify.vercel.app/sign-up";
-    }, 500);
-  };
 
   return (
     <div className="modal-overlay" onClick={onClose}>
