@@ -10,6 +10,7 @@ import KeyBenefitsSection from './KeyBenefitsSection';
 import FeaturedUseCasesSection from './FeaturedUseCasesSection';
 import Modal from './Modal'; // Import the Modal component
 import Footer from './Footer';
+import FAQ from './FAQ';
 
 // Check token and redirect
 const checkTokenAndRedirect = async (token, navigate) => {
@@ -107,7 +108,9 @@ const DownloadPage = () => {
         <section id="benefit">
           <KeyBenefitsSection />
         </section>
-
+        <section id='faq'>
+          <FAQ/>
+        </section>
         <section id="cases">
           <FeaturedUseCasesSection onStartJourney={openModal} /> {/* Pass the openModal function as a prop */}
         </section>
