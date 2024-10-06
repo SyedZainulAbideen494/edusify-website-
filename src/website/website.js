@@ -102,9 +102,9 @@ const DownloadPage = () => {
         <section id="features">
           <FeaturesOverview />
         </section>
-       {/* <section id="plan">
+       <section id="plan">
           <PricingSection />
-        </section>*/} 
+        </section>
         <section id="benefit">
           <KeyBenefitsSection />
         </section>
