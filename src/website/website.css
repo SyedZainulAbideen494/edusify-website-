@@ -468,11 +468,7 @@
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.user-count:hover {
-  transform: translateY(-5px); /* Slightly higher lift */
-  background-color: #45a049; /* Change background color on hover */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-}
+
 
 /* Adding a pulsating effect */
 @keyframes pulse {
