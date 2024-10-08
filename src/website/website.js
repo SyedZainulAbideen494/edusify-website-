@@ -11,6 +11,7 @@ import FeaturedUseCasesSection from './FeaturedUseCasesSection';
 import Modal from './Modal'; // Import the Modal component
 import Footer from './Footer';
 import FAQ from './FAQ';
+import { TypeAnimation } from 'react-type-animation';
 
 // Check token and redirect
 const checkTokenAndRedirect = async (token, navigate) => {
@@ -85,7 +86,20 @@ const DownloadPage = () => {
         <section className="hero">
   <div className="hero-content">
     <h1>Transform Your Study Routine</h1>
-    <p className="user-count">Join 50,000+ learners who are transforming their study routines with Eduisfy!</p>
+    <div className="user-count">
+      <TypeAnimation
+        sequence={[
+          'Join 50,000+ learners who are transforming their study routines with Eduisfy!', // The text to display
+          1000, // Wait for 1 second
+          '', // Erase the text
+          500, // Wait for half a second before typing again
+          'Join 50,000+ learners and take control of your studies today!', // New message (you can customize this)
+          2000, // Wait for 2 seconds
+        ]}
+        speed={50} // Speed of typing
+        repeat={Infinity} // Repeat the animation indefinitely
+      />
+    </div>
 
     <div className="hero-buttons">
       <button className="cssbuttons-io-button" onClick={openModal}>Get started
