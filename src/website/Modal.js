@@ -15,7 +15,7 @@ const Modal = ({ isOpen, onClose }) => {
           </header>
           <div className="modal-body">
             <p style={{ color: '#888', fontSize: '14px', lineHeight: '1.4' }}>
-              <strong>Note:</strong> Once the download is complete, you will need to install the app to start using it.
+              <strong>Note:</strong> Once the download is complete, you will need to <b>install the app</b> to start using it.
               For more information, see our <Link Link to="/download/instructions" style={{ color: '#7161ef', textDecoration: 'underline' }}>instructions</Link>.
             </p>
           </div>
