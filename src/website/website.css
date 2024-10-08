@@ -166,11 +166,13 @@
   align-items: center;
   text-align: center;
   height: 80vh;
-  background: linear-gradient(to right, #3a8dff, #00bfae); /* Gradient background */
+  background: linear-gradient(to right, #1e3c72, #2a5298, #34a853); /* Cool, calming gradient */
   color: #fff;
   padding: 0 20px;
   position: relative;
 }
+
+
 
 .hero::before {
   content: "";
