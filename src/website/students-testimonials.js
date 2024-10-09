@@ -44,7 +44,7 @@ const TestimonialHero = () => {
                 <img src="https://dropment.online/1728283961885.jpg" alt="User 4" className="user-icon__testimonial__hero__section" />
                 <div className="testimonial__hero__section__testimonial-text">
         <span className="user-text__testimonial__hero__section">
-          <strong className="big-number">50,000+</strong><br/> students use Edusify
+          <strong className="big-number">150,000+</strong><br/> students use Edusify
         </span>
       </div>
               </div>
