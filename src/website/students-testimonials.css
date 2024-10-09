@@ -79,11 +79,11 @@
 }
 
 .user-text__testimonial__hero__section {
-    font-size: 1rem; /* Default font size for regular text */
+    font-size: 15px; /* Default font size for regular text */
 }
 
 .big-number {
-    font-size: 20px; /* Bigger font size for 50,000+ */
+    font-size: 16px; /* Bigger font size for 50,000+ */
     font-weight: bold; /* Make it bold */
 }
 
