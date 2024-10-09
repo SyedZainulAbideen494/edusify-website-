@@ -55,14 +55,6 @@ const KeyBenefitsSection = () => {
             <p>Join study groups, share resources, and collaborate with peers for a more interactive study session.</p>
           </div>
         </div>
-        <div className="benefit-item">
-          <div className="first-content">
-            <h3>Personalized Study</h3>
-          </div>
-          <div className="second-content">
-            <p>Customize your study environment with personalized themes and content tailored to your needs.</p>
-          </div>
-        </div>
       </div>
       <a href="#features" className="cta-button fade-in">Explore Edusify</a>
     </section>
