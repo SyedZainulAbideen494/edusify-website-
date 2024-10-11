@@ -1,0 +1,187 @@
+/* Testimonial Section Styles */
+.testimonial-section {
+    background-color: #000; /* Black background */
+    color: white;
+    padding: 40px 20px; /* Compact padding */
+    position: relative;
+    overflow: hidden; /* Prevent overflow for animations */
+  }
+  
+  .container {
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto; /* Centering */
+    padding: 0 15px; /* Padding for smaller screens */
+  }
+  
+  .testimonial-title {
+    font-size: 2rem; /* Smaller title */
+    text-align: center;
+    margin-bottom: 15px; /* Compact margin */
+    animation: fadeIn 1s ease-out 0.5s forwards; /* Added animation */
+    opacity: 0; /* For fade-in effect */
+  }
+  
+  .testimonial-description {
+    font-size: 1rem; /* Smaller description */
+    text-align: center;
+    margin-bottom: 25px; /* Compact margin */
+    color: #aaa;
+    animation: fadeIn 1s ease-out 0.7s forwards; /* Added animation */
+    opacity: 0; /* For fade-in effect */
+  }
+  
+  .user-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px; /* Compact margin */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  }
+  
+  .user-icon {
+    width: 50px; /* Smaller icon size */
+    height: 50px; /* Smaller icon size */
+    border-radius: 50%; /* Rounded avatars */
+    margin: 0 5px; /* Reduced space between icons */
+    transition: transform 0.3s ease; /* Animation on hover */
+    opacity: 0; /* For fade-in effect */
+    animation: fadeIn 1s ease-out 1s forwards; /* Added animation */
+  }
+  
+  .user-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  .big-number {
+    font-size: 1.5rem; /* Adjusted font size */
+    color: #ffdd57; /* Highlight color */
+  }
+  
+  .testimonial-text {
+    text-align: center;
+    margin-top: 10px; /* Space between icons and text */
+  }
+  
+  .hero-buttons {
+    text-align: center;
+  }
+  
+  .cssbuttons-io-button {
+    background-color: #ffdd57; /* Button color */
+    color: #000; /* Button text color */
+    padding: 10px 20px; /* Adjusted padding for button */
+    border: none;
+    border-radius: 25px; /* Rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold; /* Bold text */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  }
+  
+  .cssbuttons-io-button:hover {
+    background-color: #f0d400; /* Lighter shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s forwards; /* General fade-in */
+  }
+  
+  .fade-in-bottom {
+    animation: fadeInUp 1s forwards; /* Fade-in with upward motion */
+  }
+  
+  /* Fade-in animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .testimonial-title {
+      font-size: 1.75rem; /* Adjust title size for smaller screens */
+    }
+  
+    .testimonial-description {
+      font-size: 0.9rem; /* Adjust description size for smaller screens */
+    }
+  
+    .big-number {
+      font-size: 1.2rem; /* Adjust number size for smaller screens */
+    }
+  
+    .user-icon {
+      width: 40px; /* Smaller icon size for mobile */
+      height: 40px; /* Smaller icon size for mobile */
+      margin: 0 3px; /* Reduced space between icons */
+    }
+  
+    .cssbuttons-io-button {
+      padding: 8px 15px; /* Adjust button padding for mobile */
+      font-size: 0.9rem; /* Smaller button text for mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .testimonial-title {
+      font-size: 1.5rem; /* Further adjust title size */
+    }
+  
+    .testimonial-description {
+      font-size: 0.8rem; /* Further adjust description size */
+    }
+  
+    .big-number {
+      font-size: 1rem; /* Further adjust number size */
+    }
+  
+    .user-icon {
+      width: 35px; /* Smaller icon size for very small screens */
+      height: 35px; /* Smaller icon size for very small screens */
+    }
+  
+    .cssbuttons-io-button {
+      padding: 6px 12px; /* Further adjust button padding */
+      font-size: 0.8rem; /* Smaller button text */
+    }
+  }
+  
+
+/* Add this new class to your existing CSS */
+.fade-in {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.animate {
+    opacity: 1; /* Fully visible when animated */
+    transform: translateY(0); /* Reset position */
+}
+
+.fade-in-bottom {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-bottom.animate {
+    opacity: 1; /* Fully visible when animated */
+    transform: translateY(0); /* Reset position */
+}

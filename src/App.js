@@ -1,27 +1,20 @@
-import { Fragment } from "react";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Link,
-  Params,
-} from "react-router-dom";
-import "./index.css";
-import "./App.css";
-import DownloadPage from "./website/website";
-import NotFoundPage from "./app_modules/404Page";
-import Instructions from "./website/Instructions";
-
-const router = createBrowserRouter([
-  {path: '/', element: <DownloadPage/>},
-  {path: '/download/instructions', element: <Instructions/>},
-  { path: '*', element: <NotFoundPage /> }, // This catches all undefined routes
-]);
-
+import logo from './logo.svg';
+import './App.css';
+import HeroSection from './components/hero-section';
+import FeaturesOverview from './components/FeaturesSection';
+import TestimonialSection from './components/TestimonialSection';
+import FAQSection from './components/FAQSection';
+import CallToActionWithFooter from './components/cta-footer';
 
 function App() {
+  
   return (
-    <div>
-      <RouterProvider router={router} />
+    <div className="App">
+     <HeroSection/>
+     <FeaturesOverview/>
+     <TestimonialSection/>
+     <FAQSection/>
+     <CallToActionWithFooter/>
     </div>
   );
 }

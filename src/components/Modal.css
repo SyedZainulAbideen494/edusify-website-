@@ -1,0 +1,165 @@
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8); /* Darker overlay for focus */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* Card */
+.card {
+  width: 90%; /* Increased width for better content fit */
+  max-width: 500px; /* Max width for larger screens */
+  height: auto; /* Auto height for dynamic content */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 15px 30px -5px; /* Darker shadow */
+  background: #1a1a1a; /* Dark background for the card */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: rgba(0, 0, 0, 0.6) 0 20px 40px -10px; /* Enhanced shadow */
+}
+
+/* Card Content */
+.card__content___dwonload__get__started__modal {
+  padding: 20px; /* Added padding for better spacing */
+  color: #ffffff; /* White text for better contrast */
+}
+
+/* Modal Header */
+.modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light border for separation */
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem; /* Larger font size for readability */
+  font-weight: 600;
+}
+
+/* Modal Body */
+.modal-body p {
+  font-size: 1rem;
+  color: #cccccc; /* Light gray for better readability */
+  margin: 0;
+}
+
+/* Modal Buttons */
+.modal-buttons {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  align-items: center; /* Center buttons vertically */
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 16px; /* Adjust spacing between buttons */
+}
+
+/* Button Styles */
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Modal Footer */
+.modal-footer {
+  margin-top: 20px;
+}
+
+/* Close Button */
+.modal-close {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #444; /* Dark gray for the close button */
+  color: #ffffff; /* White text */
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.modal-close:hover {
+  background: #666; /* Darker gray on hover */
+  transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .card {
+    max-width: 400px; /* Max width for larger screens */
+  }
+}
+
+/* Download Button */
+.download-btn {
+  border: 2px solid #555; /* Dark border */
+  background-color: #333; /* Dark background */
+  width: 120px; /* Increased width to fit text */
+  height: 50px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  gap: 8px; /* Space between the icon and text */
+}
+
+.download-btn svg {
+  width: 25px;
+  height: 25px;
+  fill: #ccc; /* Default SVG fill color */
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover svg {
+  fill: #fff; /* Change SVG color on hover */
+}
+
+.download-btn:hover {
+  background-color: #555; /* Lighter background on hover */
+}
+
+.download-text {
+  font-size: 1rem; /* Adjust font size */
+  color: #ccc; /* Light gray for text color */
+  transition: color 0.3s ease; /* Transition for text color */
+}
+
+.download-btn:hover .download-text {
+  color: white; /* Change text color on hover */
+}
+
+/* Shine Button */
+.btn-shine {
+  position: relative; /* Keep the shine effect */
+  padding: 12px 20px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  background: linear-gradient(to right, #444 0%, #666 100%); /* Darker gradient */
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  font-weight: 600;
+  font-size: 16px;
+}

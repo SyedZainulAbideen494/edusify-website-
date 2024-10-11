@@ -1,0 +1,95 @@
+body {
+    background-color: #000; /* Black background for the body */
+    color: #f0f0f0; /* Light gray text for better contrast */
+    font-family: 'Arial', sans-serif;
+}
+
+.faq-section {
+    padding: 40px 20px; /* Increased padding for a spacious layout */
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 0 auto;
+    background-color: #000; /* Black background for the section */
+}
+
+.faq-section h2 {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Spacing below the title */
+    font-size: 1.8rem;
+}
+
+.faq-list {
+    margin-top: 20px;
+}
+
+.faq-item {
+    background-color: #0a0a0a; /* Dark background for FAQ item */
+    border-radius: 10px; /* Rounded corners for a premium look */
+    margin-bottom: 15px; /* Space between items */
+    overflow: hidden; /* Hide overflow for smooth animations */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.faq-question {
+    padding: 15px; /* Adjusted padding */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between question and arrow */
+    align-items: center; /* Center items vertically */
+    cursor: pointer; /* Pointer cursor for clickable items */
+    transition: background-color 0.3s ease; /* Smooth background change */
+    font-size: 0.9rem; /* Smaller font size for question */
+    color: #f0f0f0; /* Light text color for visibility */
+    will-change: background-color; /* Optimize for background color change */
+}
+
+/* Add a wrapper for the arrow */
+.faq-question-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+}
+
+.faq-answer {
+    max-height: 0; /* Initially hide the answer */
+    opacity: 0; /* Initially hide the answer */
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease; /* Slowed transition */
+    padding: 0 15px; /* Padding for answer */
+    font-size: 0.8rem; /* Smaller font size for answer */
+    color: #f0f0f0; /* Light text color for visibility */
+    will-change: max-height, opacity; /* Optimize for height and opacity change */
+}
+
+.faq-answer.show {
+    max-height: 150px; /* Reduced maximum height for the answer */
+    opacity: 1; /* Make answer visible */
+    padding: 15px 15px; /* Add padding when visible */
+    background-color: #0a0a0a; /* Dark background for answer */
+}
+
+.arrow {
+    display: flex; /* Ensure flex layout for alignment */
+    justify-content: flex-end; /* Align to the end */
+    transition: transform 0.4s ease; /* Slowed transition for the arrow */
+    color: #ccc; /* Color for the arrow */
+    width: 24px; /* Fixed width for alignment */
+    will-change: transform; /* Optimize for rotation change */
+}
+
+.arrow-icon {
+    transition: transform 0.4s ease; /* Slowed transition for the SVG arrow */
+}
+
+.arrow.open .arrow-icon {
+    transform: rotate(180deg); /* Rotate arrow when open */
+    color: #fff; /* Change arrow color when open */
+}
+
+/* Add these styles to keep the arrow's size and alignment consistent */
+.faq-question {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between question and arrow */
+    align-items: center; /* Center items vertically */
+    cursor: pointer; /* Pointer cursor for clickable items */
+    transition: background-color 0.3s ease; /* Smooth background change */
+    font-size: 0.9rem; /* Smaller font size for question */
+    color: #f0f0f0; /* Light text color for visibility */
+}
