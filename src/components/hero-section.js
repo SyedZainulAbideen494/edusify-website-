@@ -7,8 +7,10 @@ const HeroSection = () => {
   const [fadeIn, setFadeIn] = useState(false);
   const [showCookieNotification, setShowCookieNotification] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
-  const texts = ["learning", "education", "success", "knowledge"];
-  const [currentText, setCurrentText] = useState(texts[0]);
+  const baseText = "Discover the future of"; // Base text
+  const texts = ["learning with AI", "education at your fingertips", "smart studying", "personalized knowledge", "intelligent growth"];
+  
+  const [currentText, setCurrentText] = useState(`${baseText} ${texts[0]}`); // Initialize with the first word
   const textRef = useRef(null);
   let index = 0;
 
@@ -20,7 +22,7 @@ const HeroSection = () => {
     const changeText = () => {
       setTimeout(() => {
         index = (index + 1) % texts.length;
-        setCurrentText(texts[index]);
+        setCurrentText(`${baseText} ${texts[index]}`); // Change the last word only
       }, 500);
     };
 

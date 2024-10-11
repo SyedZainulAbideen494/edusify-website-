@@ -118,7 +118,7 @@ body {
 }
 
 .changing__text {
-  font-size: 1.2rem;
+  font-size: 12px;
   margin-top: 8px;
   color: #aaa;
   font-weight: bold;
@@ -126,6 +126,8 @@ body {
   animation: fadeInUp 1s ease-out 0.7s;
   animation-fill-mode: forwards;
 }
+
+
 
 /* Cookie notification */
 .cookie__notification {
