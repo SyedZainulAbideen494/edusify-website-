@@ -31,7 +31,7 @@ const spin = keyframes`
 const Card = styled.div`
   --bg-color: #212121;
   background-color: var(--bg-color);
-  padding: 1rem 2rem;
+  padding: 10px;
   border-radius: 1.25rem;
 `;
 

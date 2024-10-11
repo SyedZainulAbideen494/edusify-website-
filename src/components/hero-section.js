@@ -10,6 +10,8 @@ const HeroSection = () => {
   const [showCookieNotification, setShowCookieNotification] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
   const [exitAnimation, setExitAnimation] = useState(false); // State for exit animation
+  const [fadeOut, setFadeOut] = useState(false); // State for fade-out of text
+
   const baseText = "Discover the future of"; // Base text
   const texts = ["learning with AI", "education at your fingertips", "smart studying", "personalized knowledge", "intelligent growth"];
   
@@ -30,10 +32,12 @@ const HeroSection = () => {
 
     // Function to change the text every 2 seconds
     const changeText = () => {
+      setFadeOut(true); // Trigger fade-out
       setTimeout(() => {
         index = (index + 1) % texts.length;
         setCurrentText(`${baseText} ${texts[index]}`); // Change the last word only
-      }, 500);
+        setFadeOut(false); // Reset fade-out after setting new text
+      }, 500); // Duration of fade-out
     };
 
     const intervalId = setInterval(changeText, 2000);
@@ -74,8 +78,10 @@ const HeroSection = () => {
 
           <div className="hero__content">
             <h1 className="brand__name">Edusify</h1>
-            <p className="changing__text" ref={textRef}>
-              <span className="text-container" id="dynamic-text">{currentText}</span>
+            <p className="changing__text">
+              <span className={`text-container ${fadeOut ? "fade-out-text" : "fade-in-text"}`}>
+                {currentText}
+              </span>
             </p>
           </div>
 
