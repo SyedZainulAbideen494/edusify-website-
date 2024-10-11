@@ -1,13 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { TypeAnimation } from 'react-type-animation'; // Ensure you have this package installed
 import './TestimonialSection.css';
+import Modal from './Modal';
 
 const TestimonialSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
 
-  const openModal = () => {
-    // Add your modal opening logic here
+  const handleGetAppClick = () => {
+    setIsModalOpen(true); // Open the modal
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false); // Close the modal
   };
 
   // Observer logic
@@ -41,6 +47,7 @@ const TestimonialSection = () => {
 
   return (
     <section className="testimonial-section" ref={sectionRef}>
+            <Modal isOpen={isModalOpen} onClose={handleCloseModal} /> {/* Include the Modal */}
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -72,7 +79,7 @@ const TestimonialSection = () => {
                 </div>
               </div>
               <div className="hero-buttons fade-in-bottom">
-                <button className="cssbuttons-io-button" onClick={openModal}>
+                <button className="cssbuttons-io-button" onClick={handleGetAppClick}>
                   Get Started for Free
                   <div className="icon">
                     <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
