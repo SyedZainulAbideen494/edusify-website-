@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   background-color: #fff;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -455,22 +455,4 @@
   100% {
     transform: rotate(360deg);
   }
-}
-
-
-
-.user-count {
-  font-size: 1.2em;
-  color: #fff;
-  margin-bottom: 30px;
-  font-weight: bold;
-  padding: 15px 20px;
-  border-radius: 8px;
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-
-.user-count:hover {
-  animation: pulse 1.5s infinite; /* Apply pulse animation */
 }

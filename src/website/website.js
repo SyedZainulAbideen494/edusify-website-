@@ -12,6 +12,7 @@ import Modal from './Modal'; // Import the Modal component
 import Footer from './Footer';
 import FAQ from './FAQ';
 import { TypeAnimation } from 'react-type-animation';
+import logo from './images/1722866972968-removebg-preview.png'
 import TestimonialHero from './students-testimonials';
 
 // Check token and redirect
@@ -66,7 +67,7 @@ const DownloadPage = () => {
       <div className="App">
         <header className="header">
           <div className="logo">
-            <a href="/" style={{ textDecoration: 'none' }}>Edusify</a>
+            <img src={logo} style={{width: '40px'}}/>
           </div>
           <nav className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
             <a href="#features" onClick={() => scrollToSection('features')}>Features</a>
