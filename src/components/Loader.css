@@ -1,0 +1,96 @@
+/* Loader.css */
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #000; /* Dark background */
+    color: rgb(124, 124, 124); /* Text color */
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .card {
+    --bg-color: #000; /* Background color */
+    background-color: var(--bg-color);
+    padding: 2rem; /* Padding for card */
+    border-radius: 1.25rem; /* Rounded corners */
+    display: flex; /* Flex container */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+  }
+  
+  .words {
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Position relative for absolute children */
+  }
+  
+  .words::after {
+    content: ""; /* Background gradient effect */
+    position: absolute;
+    inset: 0; /* Cover the entire container */
+    background: linear-gradient(
+      var(--bg-color) 10%,
+      transparent 30%,
+      transparent 70%,
+      var(--bg-color) 90%
+    );
+    z-index: 20; /* Position behind the text */
+  }
+  
+  .word {
+    display: block; /* Block display for stacking */
+    height: 100%; /* Full height */
+    padding-left: 6px; /* Left padding */
+    color: #956afa; /* Text color */
+    animation: spin_4991 4s infinite; /* Animation for switching words */
+  }
+  
+  /* Keyframes for word animation */
+  @keyframes spin_4991 {
+    0% {
+      transform: translateY(0); /* Start position */
+    }
+    10% {
+      transform: translateY(-20%); /* Move up */
+    }
+    50% {
+      transform: translateY(-100%); /* Move out */
+    }
+    60% {
+      transform: translateY(-100%); /* Hold out */
+    }
+    100% {
+      transform: translateY(-200%); /* Move down to reveal next */
+    }
+  }
+  
+
+  /* Loader.css */
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #000; /* Dark background */
+    color: rgb(124, 124, 124); /* Text color */
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .loader-content {
+    text-align: center; /* Center text */
+  }
+  
+  .loading-animation {
+    margin-top: 1rem; /* Space above the animation */
+  }
+  
+  .word {
+    display: block; /* Block display for the word */
+    height: 40px; /* Fixed height for smoother transitions */
+    color: #956afa; /* Text color for words */
+    font-size: 30px; /* Adjust font size as needed */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for fading */
+  }
+  

@@ -13,6 +13,12 @@ body {
   overflow-x: hidden;
 }
 
+.hero__section.fade-out {
+  opacity: 0; /* Fade out effect */
+  transition: opacity 1s ease-in-out; /* Same transition for exit */
+}
+
+
 .hero__section {
   height: 90vh;
   display: flex;
