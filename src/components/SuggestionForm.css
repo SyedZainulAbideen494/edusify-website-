@@ -1,0 +1,113 @@
+/* Container for the suggestion form */
+.suggestion-form-container {
+    background-color: #000; /* Dark background */
+    color: #fff; /* White text color */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    text-align: center;
+    width: 90%; /* Use percentage for responsiveness */
+    max-width: 400px; /* Set a maximum width */
+    margin: auto; /* Center the form */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); /* Shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation on hover */
+  }
+  
+  /* Hover effect for the container */
+  .suggestion-form-container:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8); /* Deeper shadow on hover */
+  }
+  
+  /* Form styles */
+  .suggestion-form {
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Vertical stacking */
+  }
+  
+  /* Input and textarea styles */
+  .suggestion-form-input,
+  .suggestion-form-textarea {
+    background-color: #1a1a1a; /* Darker input field */
+    color: #fff; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 12px; /* Padding inside inputs */
+    margin: 10px 0; /* Margin above and below */
+    transition: background-color 0.3s, border 0.3s; /* Smooth transition */
+    width: 100%; /* Full width for inputs */
+  }
+  
+  /* Placeholder text styles */
+  .suggestion-form-input::placeholder,
+  .suggestion-form-textarea::placeholder {
+    color: #bbb; /* Lighter placeholder text */
+  }
+  
+  /* Focus styles for inputs */
+  .suggestion-form-input:focus,
+  .suggestion-form-textarea:focus {
+    outline: none; /* Remove default outline */
+    background-color: #333; /* Change background on focus */
+    border: 1px solid #ffcc00; /* Add border on focus */
+  }
+  
+  /* Button styles */
+  .suggestion-form-button {
+    background-color: #ffcc00; /* Button color */
+    color: #000; /* Button text color */
+    border: none; /* Remove default border */
+    margin-top: 10px;
+    border-radius: 5px; /* Rounded corners */
+    padding: 12px; /* Padding inside button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Animation on hover */
+  }
+  
+  /* Hover effect for the button */
+  .suggestion-form-button:hover {
+    background-color: #e6b800; /* Button hover effect */
+    transform: scale(1.05); /* Slight scaling effect on hover */
+  }
+  
+  /* Success message styles */
+  .success-message {
+    color: #ffcc00; /* Success message color */
+    text-align: center; /* Center the message */
+    margin-top: 15px; /* Space above the message */
+    font-weight: bold; /* Make message bold */
+    opacity: 0; /* Initial opacity for fade-in */
+    animation: fadeIn 0.5s ease forwards; /* Fade-in animation for success message */
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .suggestion-form-input,
+    .suggestion-form-textarea {
+      padding: 10px; /* Adjust padding for smaller screens */
+      margin: 8px 0; /* Adjust margin for smaller screens */
+    }
+  
+    .suggestion-form-button {
+      padding: 10px; /* Adjust button padding for smaller screens */
+    }
+  }
+  /* Subtitle styles */
+.suggestion-subtitle {
+    color: #bbb; /* Lighter text color for subtitle */
+    font-size: 0.9em; /* Slightly smaller font size */
+    margin: 10px 0; /* Margin above and below */
+    text-align: center; /* Center the subtitle text */
+  }
+  

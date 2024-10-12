@@ -6,6 +6,7 @@ import TestimonialSection from './components/TestimonialSection';
 import FAQSection from './components/FAQSection';
 import CallToActionWithFooter from './components/cta-footer';
 import InspirationSection from './components/InspirationSection';
+import SuggestionForm from './components/SuggestionForm';
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
      <InspirationSection/>
      <FeaturesOverview/>
      <TestimonialSection/>
+     <SuggestionForm/>
      <FAQSection/>
      <CallToActionWithFooter/>
     </div>
