@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './DownloadModal.css'; // Ensure to create this CSS file
 import { FaApple, FaAndroid, FaDownload } from 'react-icons/fa'; // Import icons
+import { API_ROUTES } from '../app_modules/apiRoutes';
 
 const DownloadModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -16,20 +17,16 @@ const DownloadModal = ({ isOpen, onClose }) => {
         <p>Download our app now and start your journey!</p>
         <div className="button-container">
           <a 
-            href="https://play.google.com" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="download-button android"
-            aria-label="Download for Android"
+            href={API_ROUTES.downloadAndroid}
+            className="btn btn-android"
+            download="Edusify.apk"
           >
             <FaAndroid />
           </a>
           <a 
-            href="https://www.apple.com/app-store/" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="download-button ios"
-            aria-label="Download for iOS"
+              href={API_ROUTES.downloadIOS}
+              className="btn btn-ios"
+              download="Edusify.shortcut"
           >
             <FaApple />
           </a>
