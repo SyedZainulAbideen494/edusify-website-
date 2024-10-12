@@ -24,14 +24,14 @@ const DownloadModal = ({ isOpen, onClose }) => {
           >
             <FaAndroid />
           </a>
-          <Link
+          <a
             href="https://edusify.vercel.app/ios/instructions/download" // Link to your iOS instructions page here
             className="download-button ios"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FaApple />
-          </Link>
+          </a>
           <a 
             href={API_ROUTES.webApp} 
             className="download-button web"
