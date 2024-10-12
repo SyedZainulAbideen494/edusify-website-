@@ -33,7 +33,7 @@ const DownloadModal = ({ isOpen, onClose }) => {
             <FaApple />
           </Link>
           <a 
-            href={API_ROUTES.webApp} // Add your web app route here
+            href={API_ROUTES.webApp} 
             className="download-button web"
             target="_blank"
             rel="noopener noreferrer"
