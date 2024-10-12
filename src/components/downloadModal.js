@@ -2,6 +2,7 @@ import React from 'react';
 import './DownloadModal.css'; // Ensure to create this CSS file
 import { FaApple, FaAndroid, FaDownload, FaGlobe } from 'react-icons/fa'; // Import FaGlobe for web icon
 import { API_ROUTES } from '../app_modules/apiRoutes';
+import { Link } from 'react-router-dom';
 
 const DownloadModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -23,13 +24,14 @@ const DownloadModal = ({ isOpen, onClose }) => {
           >
             <FaAndroid />
           </a>
-          <a 
-            href={API_ROUTES.downloadIOS}
+          <Link
+            href="https://edusify.vercel.app/ios/instructions/download" // Link to your iOS instructions page here
             className="download-button ios"
-            download="Edusify.shortcut"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaApple />
-          </a>
+          </Link>
           <a 
             href={API_ROUTES.webApp} // Add your web app route here
             className="download-button web"
