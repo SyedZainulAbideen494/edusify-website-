@@ -37,11 +37,6 @@
     transform: translateY(0); /* Move to original position */
 }
 
-/* Hover effect */
-.feature__card:hover {
-    transform: translateY(-10px) scale(1.05); /* Slight upward movement */
-    box-shadow: 0 20px 50px rgba(255, 255, 255, 0.4); /* Enhanced shadow on hover */
-}
 
 .feature__title {
     font-family: 'Montserrat', sans-serif;

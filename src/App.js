@@ -5,12 +5,14 @@ import FeaturesOverview from './components/FeaturesSection';
 import TestimonialSection from './components/TestimonialSection';
 import FAQSection from './components/FAQSection';
 import CallToActionWithFooter from './components/cta-footer';
+import InspirationSection from './components/InspirationSection';
 
 function App() {
   
   return (
     <div className="App">
      <HeroSection/>
+     <InspirationSection/>
      <FeaturesOverview/>
      <TestimonialSection/>
      <FAQSection/>

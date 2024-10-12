@@ -3,6 +3,7 @@ import "./HeroSection.css";
 import edusifyLogo from '../images/Edusify-removebg-preview.png'; // Ensure the correct path to your logo
 import Modal from './Modal'; // Import the Modal component
 import Loader from "./Loader";
+import DownloadModal from "./downloadModal";
 
 const HeroSection = () => {
   const [loading, setLoading] = useState(true); // State for loading
@@ -85,16 +86,8 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {showCookieNotification && (
-            <div className="cookie__notification">
-              <p>This website uses cookies.</p>
-              <button className="accept__button" onClick={handleAccept}>
-                Accept
-              </button>
-            </div>
-          )}
-
-          <Modal isOpen={isModalOpen} onClose={handleCloseModal} /> {/* Include the Modal */}
+      
+          <DownloadModal isOpen={isModalOpen} onClose={handleCloseModal} /> {/* Include the Modal */}
         </section>
       )}
     </>
