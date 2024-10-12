@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './DownloadModal.css'; // Ensure to create this CSS file
-import { FaApple, FaAndroid, FaDownload } from 'react-icons/fa'; // Import icons
+import { FaApple, FaAndroid, FaDownload, FaGlobe } from 'react-icons/fa'; // Import FaGlobe for web icon
 import { API_ROUTES } from '../app_modules/apiRoutes';
 
 const DownloadModal = ({ isOpen, onClose }) => {
@@ -14,27 +14,34 @@ const DownloadModal = ({ isOpen, onClose }) => {
           <FaDownload className="download-icon" />
           <h2>Get the App</h2>
         </div>
-        <p>Download our app now and start your journey!</p>
+        <p>Download our app or use the web version to start your journey!</p>
         <div className="button-container">
           <a 
             href={API_ROUTES.downloadAndroid}
-             className="download-button android"
+            className="download-button android"
             download="Edusify.apk"
           >
             <FaAndroid />
           </a>
           <a 
-              href={API_ROUTES.downloadIOS}
-               className="download-button ios"
-              download="Edusify.shortcut"
+            href={API_ROUTES.downloadIOS}
+            className="download-button ios"
+            download="Edusify.shortcut"
           >
             <FaApple />
+          </a>
+          <a 
+            href={API_ROUTES.webApp} // Add your web app route here
+            className="download-button web"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGlobe />
           </a>
         </div>
       </div>
     </div>
   );
 };
-
 
 export default DownloadModal;
