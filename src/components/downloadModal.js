@@ -18,14 +18,14 @@ const DownloadModal = ({ isOpen, onClose }) => {
         <div className="button-container">
           <a 
             href={API_ROUTES.downloadAndroid}
-            className="btn btn-android"
+             className="download-button android"
             download="Edusify.apk"
           >
             <FaAndroid />
           </a>
           <a 
               href={API_ROUTES.downloadIOS}
-              className="btn btn-ios"
+               className="download-button ios"
               download="Edusify.shortcut"
           >
             <FaApple />
