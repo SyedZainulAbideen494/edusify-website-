@@ -1,116 +1,122 @@
+/* Modal Overlay */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Ensure it appears above other content */
-    animation: fadeIn 0.5s ease; /* Fade-in animation */
-  }
-  
-  .modal-content {
-    background-color: #1c1c1c; /* Dark background for the modal */
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    color: #ffffff; /* White text for readability */
-    max-width: 400px;
-    width: 90%; /* Responsive width */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    animation: slideUp 0.5s ease; /* Slide-up animation */
-    position: relative; /* For positioning the close button */
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes slideUp {
-    from {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  .modal-header {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center the content */
-    margin-bottom: 15px; /* Space between header and text */
-  }
-  
-  .download-icon {
-    font-size: 32px; /* Icon size */
-    margin-right: 10px; /* Space between icon and title */
-    color: #ffffff; /* White color for the icon */
-  }
-  
-  .button-container {
-    margin: 20px 0;
-  }
-  
-  .download-button {
-    display: inline-block;
-    padding: 12px;
-    border-radius: 8px;
-    color: white;
-    text-decoration: none;
-    border: 2px solid #ffffff;
-    font-size: 24px; /* Larger icon size */
-    margin: 0 10px; /* Add margin between buttons */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effect */
-    background-color: transparent; /* Transparent background for the button */
-  }
-  
-  .android {
-    color: #ffffff; /* Android icon color */
-  }
-  
-  .ios {
-    color: #ffffff; /* White color for iOS icon */
-  }
-  
-  .download-button:hover {
-    transform: scale(1.1); /* Scale effect on hover */
-  }
-  
-  .close-button {
-    position: absolute; /* Absolute positioning */
-    top: 10px;
-    right: 10px; /* Align to the top right */
-    background: none; /* No background */
-    color: white; /* White color for close button */
-    border: none;
-    font-size: 24px; /* Larger close button size */
-    cursor: pointer;
-  }
-  
-  .open-modal-button {
-    padding: 12px 20px;
-    border-radius: 8px;
-    background-color: #333333; /* Dark button color */
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    margin: 20px; /* Margin for spacing */
-    transition: background-color 0.3s ease; /* Transition for hover effect */
-  }
-  
-  .open-modal-button:hover {
-    background-color: #444444; /* Darker gray on hover */
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for contrast */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: #ffffff; /* Clean white background */
+  padding: 30px;
+  border-radius: 12px; /* Softer edges */
+  text-align: center;
+  color: #333333; /* Dark gray for text */
+  max-width: 380px;
+  width: 90%;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+  animation: slideUp 0.4s ease;
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Header Section */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.download-icon {
+  font-size: 32px;
+  margin-right: 10px;
+  color: #000000; /* Solid black icon */
+}
+
+.modal-header h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000; /* Strong black heading */
+}
+
+/* Subtext */
+.modal-description {
+  color: #666666; /* Light gray for description */
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Button Container */
+.button-container {
+  margin: 20px 0;
+}
+
+.download-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 8px;
+  transition: all 0.3s ease;
+  background-color: #f7f7f7; /* Soft white button */
+  color: #000000; /* Black text */
+  border: 1px solid #e0e0e0; /* Light border */
+}
+
+.download-button .button-text {
+  margin-left: 8px;
+}
+
+.android {
+  background-color: #f7f7f7; /* Light grey */
+}
+
+.ios {
+  background-color: #f7f7f7; /* Light grey for consistency */
+}
+
+.web {
+  background-color: #f7f7f7; /* Light grey */
+}
+
+.download-button:hover {
+  background-color: #eeeeee; /* Slight darkening on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  color: #333333; /* Dark gray for close icon */
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.close-button:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}

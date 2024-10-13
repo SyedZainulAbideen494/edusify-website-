@@ -1,8 +1,7 @@
 import React from 'react';
-import './DownloadModal.css'; // Ensure to create this CSS file
-import { FaApple, FaAndroid, FaDownload, FaGlobe } from 'react-icons/fa'; // Import FaGlobe for web icon
+import './DownloadModal.css'; // Update this CSS file accordingly
+import { FaApple, FaAndroid, FaDownload, FaGlobe } from 'react-icons/fa';
 import { API_ROUTES } from '../app_modules/apiRoutes';
-import { Link } from 'react-router-dom';
 
 const DownloadModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -10,35 +9,44 @@ const DownloadModal = ({ isOpen, onClose }) => {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        {/* Close Button */}
         <button className="close-button" onClick={onClose}>✖</button>
+        
+        {/* Header Section */}
         <div className="modal-header">
           <FaDownload className="download-icon" />
-          <h2>Get the App</h2>
+          <h2>Download Edusify</h2>
         </div>
-        <p>Download our app or use the web version to start your journey!</p>
+        
+        {/* Subtext for clarity */}
+        <p className="modal-description">Get Edusify on your preferred platform or access it via web.</p>
+        
+        {/* Download Buttons */}
         <div className="button-container">
-          <a 
+          <a
             href={API_ROUTES.downloadAndroid}
             className="download-button android"
             download="Edusify.apk"
           >
-            <FaAndroid />
+            <FaAndroid /> <span className="button-text">Android</span>
           </a>
+
           <a
-            href="https://edusify.vercel.app/ios/instructions/download" // Link to your iOS instructions page here
+            href="https://edusify.vercel.app/ios/instructions/download"
             className="download-button ios"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaApple />
+            <FaApple /> <span className="button-text">iOS</span>
           </a>
-          <a 
-            href={API_ROUTES.webApp} 
+
+          <a
+            href={API_ROUTES.webApp}
             className="download-button web"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaGlobe />
+            <FaGlobe /> <span className="button-text">Web</span>
           </a>
         </div>
       </div>
@@ -47,3 +55,4 @@ const DownloadModal = ({ isOpen, onClose }) => {
 };
 
 export default DownloadModal;
+
