@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { TypeAnimation } from 'react-type-animation'; // Ensure you have this package installed
 import './TestimonialSection.css';
 import Modal from './Modal';
+import DownloadModal from './downloadModal';
 
 const TestimonialSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -47,7 +48,7 @@ const TestimonialSection = () => {
 
   return (
     <section className="testimonial-section" ref={sectionRef}>
-            <Modal isOpen={isModalOpen} onClose={handleCloseModal} /> {/* Include the Modal */}
+            <DownloadModal isOpen={isModalOpen} onClose={handleCloseModal} /> {/* Include the Modal */}
       <div className="container">
         <div className="row">
           <div className="col-12">
