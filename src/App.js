@@ -95,7 +95,7 @@ const buttonStyleAHref = {
   textDecoration: 'none', // Remove underline from the link
   boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional shadow for depth
   fontSize: '16px', // Font size
-  transition: 'background-color 0.3s, transform 0.2s', // Smooth hover effect
+  transition: 'background-color 0.3s, transform 0.2s', // Smooth hover 
   marginTop: '20px'
 };
 
