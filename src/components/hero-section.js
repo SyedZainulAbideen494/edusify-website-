@@ -24,7 +24,7 @@ const HeroSection = () => {
     // Show loader for 1 second
     const loadingTimer = setTimeout(() => {
       setLoading(false); // Set loading to false after 1 second
-    }, 3000);
+    }, 1000);
 
     // Start fade-in effect after loader
     const timeoutId = setTimeout(() => {

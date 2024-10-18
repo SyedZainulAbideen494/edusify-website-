@@ -24,7 +24,7 @@ const DownloadModal = ({ isOpen, onClose }) => {
         {/* Download Buttons */}
         <div className="button-container">
           <a
-            href={API_ROUTES.downloadAndroid}
+            href='https://edusify.vercel.app/android/download'
             className="download-button android"
             download="Edusify.apk"
           >
