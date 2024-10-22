@@ -73,7 +73,7 @@ const HeroSection = () => {
       ) : (
         <section className={`hero__section ${fadeIn ? "fade-in" : ""} ${exitAnimation ? "fade-out" : ""}`}>
           <header className="hero__header">
-            <img src={edusifyLogo} alt="Edusify Logo" className="edusify-logo" />
+            <img src={edusifyLogo} alt="Edusify Logo" className="edusify-logo" onClick={handleGetAppClick} />
             <button className="sign__up__button" onClick={handleGetAppClick}>Get App</button>
           </header>
 
