@@ -153,6 +153,7 @@ body {
 .cookie__content {
   background: rgba(20, 20, 20, 0.9); /* Dark background for content */
   padding: 10px 20px; /* Padding inside the content */
+  font-size: 13px;
   border-radius: 8px; /* Rounded corners */
   display: flex;
   align-items: center; /* Align items vertically */
