@@ -24,7 +24,7 @@ const HeroSection = () => {
   useEffect(() => {
     const loadingTimer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 2500);
 
     const timeoutId = setTimeout(() => {
       setFadeIn(true);
@@ -50,36 +50,50 @@ const HeroSection = () => {
 
   const handleAccept = () => {
     setShowCookieNotification(false);
-
+  
     // Collect additional data for cookie consent
     const cookieData = {
       cookieConsent: true,
       timestamp: new Date().toISOString(),
       browser: navigator.userAgent, // Collect browser information
       device: navigator.userAgent.includes("Mobile") ? "Mobile" : "Desktop", // Simple check for device type
-      ipAddress: "", // You would need a way to get the user's IP address from your backend
+      ipAddress: "", // Placeholder for IP address
       referrerUrl: document.referrer || "Direct Visit", // URL of the referrer
     };
-
-    fetch(API_ROUTES.cookiesCollect, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(cookieData),
-    })
-      .then((response) => {
-        if (response.ok) {
-          console.log('Cookie data sent successfully');
-        } else {
-          console.error('Failed to send cookie data');
-        }
+  
+    // Function to fetch IP address
+    const fetchIPAddress = async () => {
+      try {
+        const response = await fetch('https://api.ipify.org?format=json');
+        const data = await response.json();
+        cookieData.ipAddress = data.ip; // Assign the fetched IP address to cookieData
+      } catch (error) {
+        console.error('Error fetching IP address:', error);
+      }
+    };
+  
+    // Call the fetchIPAddress function and then send the cookie data
+    fetchIPAddress().then(() => {
+      fetch(API_ROUTES.cookiesCollect, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(cookieData),
       })
-      .catch((error) => {
-        console.error('Error sending cookie data:', error);
-      });
+        .then((response) => {
+          if (response.ok) {
+            console.log('Cookie data sent successfully');
+          } else {
+            console.error('Failed to send cookie data');
+          }
+        })
+        .catch((error) => {
+          console.error('Error sending cookie data:', error);
+        });
+    });
   };
-
+  
   const handleGetAppClick = () => {
     setIsModalOpen(true);
   };
