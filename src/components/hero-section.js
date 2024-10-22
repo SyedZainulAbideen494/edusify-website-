@@ -4,41 +4,39 @@ import edusifyLogo from '../images/Edusify-removebg-preview.png'; // Ensure the 
 import Modal from './Modal'; // Import the Modal component
 import Loader from "./Loader";
 import DownloadModal from "./downloadModal";
+import { API_ROUTES } from "../app_modules/apiRoutes";
 
 const HeroSection = () => {
-  const [loading, setLoading] = useState(true); // State for loading
+  const [loading, setLoading] = useState(true);
   const [fadeIn, setFadeIn] = useState(false);
   const [showCookieNotification, setShowCookieNotification] = useState(true);
-  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
-  const [exitAnimation, setExitAnimation] = useState(false); // State for exit animation
-  const [fadeOut, setFadeOut] = useState(false); // State for fade-out of text
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [exitAnimation, setExitAnimation] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
 
-  const baseText = "Discover the future of"; // Base text
+  const baseText = "Discover the future of";
   const texts = ["learning with AI", "education at your fingertips", "smart studying", "personalized knowledge", "intelligent growth"];
   
-  const [currentText, setCurrentText] = useState(`${baseText} ${texts[0]}`); // Initialize with the first word
+  const [currentText, setCurrentText] = useState(`${baseText} ${texts[0]}`);
   const textRef = useRef(null);
   let index = 0;
 
   useEffect(() => {
-    // Show loader for 1 second
     const loadingTimer = setTimeout(() => {
-      setLoading(false); // Set loading to false after 1 second
+      setLoading(false);
     }, 3000);
 
-    // Start fade-in effect after loader
     const timeoutId = setTimeout(() => {
       setFadeIn(true);
     }, 200);
 
-    // Function to change the text every 2 seconds
     const changeText = () => {
-      setFadeOut(true); // Trigger fade-out
+      setFadeOut(true);
       setTimeout(() => {
         index = (index + 1) % texts.length;
-        setCurrentText(`${baseText} ${texts[index]}`); // Change the last word only
-        setFadeOut(false); // Reset fade-out after setting new text
-      }, 500); // Duration of fade-out
+        setCurrentText(`${baseText} ${texts[index]}`);
+        setFadeOut(false);
+      }, 500);
     };
 
     const intervalId = setInterval(changeText, 2000);
@@ -46,30 +44,58 @@ const HeroSection = () => {
     return () => {
       clearInterval(intervalId);
       clearTimeout(timeoutId);
-      clearTimeout(loadingTimer); // Cleanup loading timer
+      clearTimeout(loadingTimer);
     };
   }, []);
 
   const handleAccept = () => {
     setShowCookieNotification(false);
+
+    // Collect additional data for cookie consent
+    const cookieData = {
+      cookieConsent: true,
+      timestamp: new Date().toISOString(),
+      browser: navigator.userAgent, // Collect browser information
+      device: navigator.userAgent.includes("Mobile") ? "Mobile" : "Desktop", // Simple check for device type
+      ipAddress: "", // You would need a way to get the user's IP address from your backend
+      referrerUrl: document.referrer || "Direct Visit", // URL of the referrer
+    };
+
+    fetch(API_ROUTES.cookiesCollect, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(cookieData),
+    })
+      .then((response) => {
+        if (response.ok) {
+          console.log('Cookie data sent successfully');
+        } else {
+          console.error('Failed to send cookie data');
+        }
+      })
+      .catch((error) => {
+        console.error('Error sending cookie data:', error);
+      });
   };
 
   const handleGetAppClick = () => {
-    setIsModalOpen(true); // Open the modal
+    setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
-    setExitAnimation(true); // Trigger exit animation
+    setExitAnimation(true);
     setTimeout(() => {
-      setIsModalOpen(false); // Close the modal after exit animation
-      setExitAnimation(false); // Reset exit animation state
-    }, 1000); // Match this duration with your fade-out CSS transition duration
+      setIsModalOpen(false);
+      setExitAnimation(false);
+    }, 1000);
   };
 
   return (
     <>
       {loading ? (
-        <Loader/> // Loading message
+        <Loader />
       ) : (
         <section className={`hero__section ${fadeIn ? "fade-in" : ""} ${exitAnimation ? "fade-out" : ""}`}>
           <header className="hero__header">
@@ -86,8 +112,18 @@ const HeroSection = () => {
             </p>
           </div>
 
-      
-          <DownloadModal isOpen={isModalOpen} onClose={handleCloseModal} /> {/* Include the Modal */}
+          {showCookieNotification && (
+  <div className="cookie__notification">
+    <div className="cookie__content">
+      <p>This website uses cookies.</p>
+      <button onClick={handleAccept} className="accept__button">Accept</button>
+    </div>
+  </div>
+)}
+
+
+
+          <DownloadModal isOpen={isModalOpen} onClose={handleCloseModal} />
         </section>
       )}
     </>
