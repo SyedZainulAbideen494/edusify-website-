@@ -126,14 +126,7 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {showCookieNotification && (
-  <div className="cookie__notification">
-    <div className="cookie__content">
-      <p>This website uses cookies.</p>
-      <button onClick={handleAccept} className="accept__button">Accept</button>
-    </div>
-  </div>
-)}
+
 
 
 
