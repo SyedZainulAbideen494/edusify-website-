@@ -57,22 +57,100 @@ function App() {
     }
   };
 
-  // Show only the modal if the user is in Instagram's browser
+  useEffect(() => {
+    const checkInAppBrowser = () => {
+      const ua = navigator.userAgent || navigator.vendor || window.opera;
+      if (ua.includes("Instagram")) {
+        setIsInAppBrowser(true);
+      }
+    };
+
+    checkInAppBrowser();
+  }, []);
+
+  const modalStyle = {
+    position: 'fixed',
+    top: '0',
+    left: '0',
+    right: '0',
+    bottom: '0',
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: '1000',
+  };
+
+  const modalContentStyle = {
+    backgroundColor: '#222',
+    padding: '20px',
+    borderRadius: '16px',
+    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.5)',
+    maxWidth: '400px',
+    textAlign: 'center',
+    color: '#ffffff',
+  };
+
+  const linkStyle = {
+    display: 'inline-block',
+    marginTop: '20px',
+    padding: '10px 20px',
+    backgroundColor: '#ffffff', // Changed to white
+    color: '#007BFF', // Set text color to a blue shade for contrast
+    borderRadius: '20px', // Increased border radius for a curvier look
+    textDecoration: 'none',
+    fontWeight: 'bold',
+    transition: 'background-color 0.3s, transform 0.2s',
+    border: '2px solid #007BFF', // Optional: add a border to define the button
+};
+
+const linkHoverStyle = {
+    backgroundColor: '#007BFF', // Change background to blue on hover
+    color: '#ffffff', // Change text color to white on hover
+    transform: 'scale(1.05)',
+};
+
+
   if (isInAppBrowser) {
     return (
       <div style={modalStyle}>
         <div style={modalContentStyle}>
-          <h2>Open in Browser</h2>
-          <p>For the best experience, please open this link in Chrome or Safari to install the app directly on your home screen.</p>
-          <a href={window.location.href} target="_blank" download style={buttonStyleAHref}>
-  Open in browser
-</a>
-
+          <h2>Notice</h2>
+          <p>
+            The Instagram in-app browser doesn't support downloads. To download the app, please use your default browser.
+          </p>
+          <a
+            href={window.location.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => {
+              e.preventDefault();
+              navigator.clipboard.writeText(window.location.href)
+                .then(() => {
+                  alert('Link copied! You can now paste it in your browser.');
+                })
+                .catch(err => console.error('Failed to copy link: ', err));
+            }}
+            style={linkStyle}
+            onMouseOver={(e) => {
+              e.currentTarget.style.backgroundColor = linkHoverStyle.backgroundColor;
+              e.currentTarget.style.transform = linkHoverStyle.transform;
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.backgroundColor = linkStyle.backgroundColor;
+              e.currentTarget.style.transform = 'none';
+            }}
+          >
+            Open in Browser
+          </a>
+          <p style={{ marginTop: '15px' }}>or copy this link: <strong>{window.location.href}</strong></p>
         </div>
       </div>
     );
   }
 
+
+  
   // Otherwise, show the full app content
   return (
     <div className="App">
