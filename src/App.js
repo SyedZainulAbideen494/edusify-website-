@@ -107,34 +107,39 @@ function App() {
 
 
 
-  if (isInAppBrowser) {
-    return (
+if (isInAppBrowser) {
+  return (
       <div style={modalStyle}>
-        <div style={modalContentStyle}>
-          <h2>Notice</h2>
-          <p>
-            The Instagram in-app browser doesn't support downloads. To download the app, please use your default browser.
-          </p>
-          <a
-            href={window.location.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => {
-              e.preventDefault();
-              navigator.clipboard.writeText(window.location.href)
-                .then(() => {
-                  alert('Link copied! You can now paste it in your browser.');
-                })
-                .catch(err => console.error('Failed to copy link: ', err));
-            }}
-            style={linkStyle}
-          >
-           copy link
-          </a>
-        </div>
+          <div style={modalContentStyle}>
+              <h2>Note</h2>
+              <p>
+                   Instagram browser doesn't support downloads. 
+              </p>
+              <p style={{ marginTop: '10px' }}>
+                  📱 Tap the three dots in the top right corner and
+                  select "Open in Chrome" to proceed.
+              </p>
+              <a
+                  href={window.location.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                      e.preventDefault();
+                      navigator.clipboard.writeText(window.location.href)
+                          .then(() => {
+                              alert('Link copied! You can now paste it in your browser.');
+                          })
+                          .catch(err => console.error('Failed to copy link: ', err));
+                  }}
+                  style={linkStyle}
+              >
+                  Copy Link
+              </a>
+          </div>
       </div>
-    );
-  }
+  );
+}
+
 
 
   
