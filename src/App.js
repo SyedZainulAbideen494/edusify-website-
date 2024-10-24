@@ -104,11 +104,7 @@ function App() {
     border: '2px solid #007BFF', // Optional: add a border to define the button
 };
 
-const linkHoverStyle = {
-    backgroundColor: '#007BFF', // Change background to blue on hover
-    color: '#ffffff', // Change text color to white on hover
-    transform: 'scale(1.05)',
-};
+
 
 
   if (isInAppBrowser) {
@@ -132,14 +128,6 @@ const linkHoverStyle = {
                 .catch(err => console.error('Failed to copy link: ', err));
             }}
             style={linkStyle}
-            onMouseOver={(e) => {
-              e.currentTarget.style.backgroundColor = linkHoverStyle.backgroundColor;
-              e.currentTarget.style.transform = linkHoverStyle.transform;
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.backgroundColor = linkStyle.backgroundColor;
-              e.currentTarget.style.transform = 'none';
-            }}
           >
             Open in Browser
           </a>
