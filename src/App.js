@@ -129,9 +129,8 @@ function App() {
             }}
             style={linkStyle}
           >
-            Open in Browser
+           copy link
           </a>
-          <p style={{ marginTop: '15px' }}>or copy this link: <strong>{window.location.href}</strong></p>
         </div>
       </div>
     );
