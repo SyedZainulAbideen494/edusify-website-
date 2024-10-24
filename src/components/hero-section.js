@@ -24,7 +24,7 @@ const HeroSection = () => {
   useEffect(() => {
     const loadingTimer = setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 1500);
 
     const timeoutId = setTimeout(() => {
       setFadeIn(true);
