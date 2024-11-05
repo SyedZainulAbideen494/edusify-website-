@@ -19,7 +19,7 @@ const DownloadModal = ({ isOpen, onClose }) => {
         </div>
         
         {/* Subtext for clarity */}
-        <p className="modal-description">Get Edusify on your preferred platform or access it via web.</p>
+        <p className="modal-description">Get Edusify on your preferred platform.</p>
         
         {/* Download Buttons */}
         <div className="button-container">
@@ -40,14 +40,7 @@ const DownloadModal = ({ isOpen, onClose }) => {
             <FaApple /> <span className="button-text">iOS</span>
           </a>
 
-          <a
-            href={API_ROUTES.webApp}
-            className="download-button web"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGlobe /> <span className="button-text">Web</span>
-          </a>
+         
         </div>
       </div>
     </div>
