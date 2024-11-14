@@ -9,53 +9,76 @@ const AboutUs = () => {
   return (
     <div className="about-container">
       <Helmet>
-        <title>Edusify - Founder | Syed Zain-ul-Abideen</title>
-        <meta name="description" content="Meet Syed Zain-ul-Abideen, founder and CEO of Edusify, an innovative productivity app revolutionizing student life." />
-        
+        <title>Syed Zain-ul-Abideen - Founder & CEO of Edusify</title>
+        <meta
+          name="description"
+          content="Syed Zain-ul-Abideen is the founder and CEO of Edusify, a productivity app transforming student life. Learn about his journey and vision."
+        />
+        <meta
+          name="keywords"
+          content="Syed Zain-ul-Abideen, founder of Edusify, CEO of Edusify, Edusify app, productivity app for students, Edusify founder"
+        />
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "Person",
-            "name": "Syed Zain-ul-Abideen",
-            "jobTitle": "Founder & CEO",
-            "affiliation": {
-              "@type": "Organization",
-              "name": "Edusify"
-            }
-          })}
-        </script>
+  {`
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Syed Zain-ul-Abideen",
+      "jobTitle": "Founder & CEO",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Edusify"
+      },
+      "url": "https://edusify-download.vercel.app/about-us",
+      "sameAs": [
+        "https://www.instagram.com/_syed_zain_ul" 
+      ]
+    }
+  `}
+</script>
+
       </Helmet>
+
       <div className="about-content">
-      <button className="back-button-abt" onClick={() => navigate(-1)}>
-        ← 
-      </button>
-        <h1>About Our Founder</h1>
-        <h2>Syed Zain-ul-Abideen, Founder & CEO</h2>
+        <button className="back-button-abt" onClick={() => navigate(-1)}>
+          ←
+        </button>
+
+        <h1>About Syed Zain-ul-Abideen, Founder of Edusify</h1>
+
+        <h2>Syed Zain-ul-Abideen, Founder & CEO of Edusify</h2>
+
         <p>
-          Syed Zain-ul-Abideen is the founder and CEO of Edusify, a productivity app designed to transform how students manage their academic tasks. As a high school senior with a vision to impact the tech world, Syed set out to create a tool that makes student life simpler, more organized, and fully digital—all within a single app. Despite being an average student with no prior experience, Syed's drive to solve common challenges faced by students inspired him to take on the challenge of founding Edusify.
+          Syed Zain-ul-Abideen is the visionary founder and CEO of <strong>Edusify</strong>, a revolutionary productivity app designed to make student life easier. With the goal of simplifying academic tasks, he created Edusify to offer students a powerful suite of digital tools, including to-do lists, AI-powered notes, flashcards, Pomodoro timers, and more—all in one app. Despite being an average student in school with no prior technical experience, Syed's passion for solving student problems fueled his journey to create Edusify.
         </p>
-        
-        <h1>The Inspiration Behind Edusify</h1>
+
+        <h2>The Inspiration Behind Edusify</h2>
         <p>
-          While students often juggle multiple apps for productivity—one for Pomodoro timers, another for to-do lists, yet another for notes, and a separate one for AI-powered tools—Syed saw an opportunity to bring these essential tools together in a seamless experience. With Edusify, students can access a range of study and productivity tools, including to-do lists, notes, flashcards, calendars, and even Pomodoro timers, all powered by AI to save time and enhance focus.
+          As a student, Syed Zain-ul-Abideen noticed that students often relied on multiple apps to handle their academic tasks. From task management apps to Pomodoro timers and note-taking tools, none of these solutions worked seamlessly together. That's when Syed saw the opportunity to bring all these features into one app—Edusify. By integrating AI-powered tools for notes, quizzes, flashcards, and more, Edusify was born as the ultimate all-in-one productivity app for students.
         </p>
+
+        <h2>The Vision of Syed Zain-ul-Abideen</h2>
         <p>
-          Additionally, Syed recognized that existing productivity apps for students lacked an engaging, interactive design, often feeling dull and unresponsive to student feedback. At Edusify, user feedback is at the heart of everything, with the app's user interface being improved daily based on the needs and suggestions of the community.
+          As the founder of Edusify, Syed Zain-ul-Abideen has always focused on the user experience. His goal is to continuously improve the app based on user feedback and provide a solution that helps students organize their academic life more efficiently. With a passion for innovation and education, Syed has built Edusify to not only help students get better grades but to also save time, reduce stress, and make studying more enjoyable.
         </p>
-        
-        <h1>The Impact of Edusify on Student Life</h1>
+
+        <h2>The Impact of Edusify</h2>
         <p>
-          Edusify was created with a mission to make studying more efficient and manageable. By moving key study tools into a single, easy-to-use digital platform, Edusify aims to reduce the clutter of traditional study materials. With the flashcard feature, students no longer need extra paper to create study aids; they can use AI to generate flashcards instantly, saving time and reducing waste. The integrated Pomodoro timer helps students maintain focus without needing a separate app, and everything from notes to reminders is accessible with just a few taps.
+          Since its launch, Edusify has made a significant impact on students worldwide. The app's unique features, including AI-driven note-taking, personalized reminders, and intuitive task management, have helped over 1,500 users improve their productivity. With Syed Zain-ul-Abideen at the helm, Edusify continues to grow rapidly, gaining recognition and reaching a $2 million valuation in just its first month. Edusify is truly transforming the student experience, thanks to Syed's relentless pursuit of making academic life easier.
         </p>
-        
-        <h1>Our Journey and Milestones</h1>
+
+        <h2>Meet Syed Zain-ul-Abideen - The Founder and Innovator</h2>
         <p>
-          In under a month since its launch, Edusify has reached over 1,500 users, showing strong early traction and engagement. The app’s unique approach and student-centered features have led to a $2 million valuation within the first month, a testament to its growing impact and potential in the EdTech market.
+          Syed Zain-ul-Abideen is not just a founder; he is a visionary and an innovator who strives to make the world a better place for students. His journey from being a regular student with big dreams to creating a multi-million-dollar productivity app is a testament to his hard work, dedication, and passion for helping others succeed.
         </p>
-        
-        <h1>Looking Ahead</h1>
+
+        <h2>Looking Ahead with Syed Zain-ul-Abideen</h2>
         <p>
-          Syed's vision for Edusify is to continue enhancing student life by expanding and refining its features based on real user feedback. With a commitment to innovation, Edusify is on a mission to make studying not only more effective but also more enjoyable for students everywhere.
+          The future of Edusify is bright under the leadership of Syed Zain-ul-Abideen. With his commitment to continuous improvement and a deep understanding of student needs, Syed plans to expand Edusify's features, further enhance the user experience, and help millions of students around the world. Edusify is here to stay, and Syed's vision is just getting started.
+        </p>
+
+        <p>
+          Connect with Syed Zain-ul-Abideen through his professional profiles and stay updated on the latest Edusify news.
         </p>
       </div>
     </div>
