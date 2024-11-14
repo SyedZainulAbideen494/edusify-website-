@@ -32,15 +32,16 @@ const AboutUs = () => {
           <p className="founder-title">{founderInfo.title}</p>
           <p className="founder-description">{founderInfo.bio}</p>
 
-          <h4 style={{marginTop:'30px', marginBottom:' 30px'}}>Achievements:</h4>
+          <h4 style={{ marginTop: '30px', marginBottom: '30px' }}>Achievements:</h4>
           <ul>
             {founderInfo.achievements.map((achievement, index) => (
-              <li className='achievement-item' key={index}>{achievement}</li>
+              <li className="achievement-item" key={index}>{achievement}</li>
             ))}
           </ul>
 
-          <h4 style={{marginTop:'30px', marginBottom:' 30px'}}>Vision:</h4>
+          <h4 style={{ marginTop: '30px', marginBottom: '30px' }}>Vision:</h4>
           <p>{founderInfo.vision}</p>
+
 
         </div>
       </div>
