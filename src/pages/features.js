@@ -10,11 +10,51 @@ const Features = () => {
     <div className="features-container">
       <Helmet>
         <title>Edusify - Features</title>
+        <meta
+          name="description"
+          content="Discover the features of Edusify, the ultimate all-in-one productivity app for students. From task management to AI-powered notes and Pomodoro timers, Edusify is designed to enhance student productivity."
+        />
+        <meta
+          name="keywords"
+          content="Edusify, productivity app for students, best studying app, features of Edusify, student productivity, Pomodoro timer, AI assistant for students, Edusify planner"
+        />
+        <meta
+          property="og:title"
+          content="Edusify - Features"
+        />
+        <meta
+          property="og:description"
+          content="Explore the powerful features of Edusify, a productivity app tailored for students. Manage tasks, create study schedules, and enhance your learning experience."
+        />
+        <meta
+          property="og:url"
+          content="https://edusify-download.vercel.app/features"
+        />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Product",
+              "name": "Edusify",
+              "description": "Edusify is a productivity app designed to help students organize their study tasks, take notes, manage schedules, and improve focus with Pomodoro timers and AI-powered tools.",
+              "brand": "Edusify",
+              "url": "https://edusify-download.vercel.app/features",
+              "logo": "https://srv594954.hstgr.cloud//1722865454443.png",
+              "offers": {
+                "@type": "Offer",
+                "url": "https://edusify-download.vercel.app",
+                "priceCurrency": "USD",
+                "price": "Free"
+              }
+            }
+          `}
+        </script>
       </Helmet>
       <div className="features-content">
-      <button className="back-button-abt" onClick={() => navigate(-1)}>
-        ← 
-      </button>
+        <button className="back-button-abt" onClick={() => navigate(-1)}>
+          ←
+        </button>
+
         <h1>Edusify – Your All-in-One Productivity Hub</h1>
         <p>
           Edusify brings together a comprehensive suite of tools to help students stay organized, motivated, and on top of their academic game. Discover how Edusify’s features can transform your study routine!
