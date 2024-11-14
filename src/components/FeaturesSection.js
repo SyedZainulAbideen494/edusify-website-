@@ -5,55 +5,61 @@ const FeaturesOverview = () => {
     const features = [
         {
             icon: 'fa-solid fa-tasks',
-            title: 'Task Management',
-            description: 'Organize assignments, projects, and deadlines with an intuitive task management system. Set priorities, due dates, and reminders to stay on top of your academic responsibilities.',
+            title: 'Planner (To-Do List)',
+            description: 'Stay organized with the built-in planner where you can create and manage tasks efficiently. Add tasks manually, or let Edusify’s AI assist you by generating detailed tasks based on available time and work scope.',
+        },
+        {
+            icon: 'fa-solid fa-brain',
+            title: 'AI Assistant',
+            description: 'Your digital study companion. Ask questions, generate notes, create schedules, or get personalized study tips powered by advanced AI to assist with all academic needs.',
+        },
+        {
+            icon: 'fa-solid fa-file-alt',
+            title: 'Notes',
+            description: 'Organize your study materials with customizable notes. Add subjects, topics, and personalize with fonts, colors, sizes, or even background images. Use AI to generate notes automatically and save time.',
+        },
+        {
+            icon: 'fa-solid fa-flashcard',
+            title: 'Flashcards',
+            description: 'Create and review flashcards for effective studying. Categorize them by topic or subject and generate them manually or using AI to reinforce key concepts for exams.',
         },
         {
             icon: 'fa-solid fa-users',
-            title: 'Collaborative Study Groups',
-            description: 'Form and join study groups with friends or classmates. Share notes, resources, and engage in real-time discussions.',
+            title: 'Groups',
+            description: 'Collaborate in distraction-free environments with classmates. Share notes, quizzes, and documents, and engage in group chats without notifications interrupting your study flow.',
         },
         {
-            icon: 'fa-solid fa-palette',
-            title: 'Aesthetic Notes & Flashcards',
-            description: 'Create and customize visually appealing notes and flashcards. Use various fonts, colors, and layouts to make studying engaging.',
+            icon: 'fa-solid fa-pen-alt',
+            title: 'AI Quizzes',
+            description: 'Create quizzes to test your knowledge or challenge your friends. Generate quizzes manually or let Edusify’s AI create them based on subjects or topics for more efficient exam preparation.',
+        },
+        {
+            icon: 'fa-solid fa-lock',
+            title: 'Document Locker',
+            description: 'Store important documents like IDs, exam papers, and project files securely. Add password protection for an extra layer of security.',
+        },
+        {
+            icon: 'fa-solid fa-calendar-alt',
+            title: 'Calendar',
+            description: 'Track important dates like exams, assignments, birthdays, and deadlines with the built-in calendar. Never miss an important date again with helpful reminders.',
         },
         {
             icon: 'fa-solid fa-clock',
             title: 'Pomodoro Timer',
-            description: 'Boost productivity with a built-in Pomodoro timer. Set study intervals and breaks to maintain focus and avoid burnout.',
-        },
-        {
-            icon: 'fa-solid fa-music',
-            title: 'Music Player',
-            description: 'Enjoy your favorite study playlists within the app. Access curated playlists to enhance concentration and relaxation during study sessions.',
-        },
-        {
-            icon: 'fa-solid fa-calendar',
-            title: 'Calendar & Reminders',
-            description: 'Stay organized with a calendar that tracks study sessions, deadlines, and events.',
+            description: 'Stay focused with the Pomodoro timer. Track study and break sessions, monitor productivity, and switch between dark and light themes for a personalized experience.',
         },
         {
             icon: 'fa-solid fa-share-alt',
-            title: 'Social Feed',
-            description: 'Share your achievements, study progress, and motivational quotes with the Edusify community.',
-        },
-        {
-            icon: 'fa-solid fa-calculator',
-            title: 'Math & Science Helper',
-            description: 'Get instant assistance with math problems and science concepts. Simplify complex equations with built-in tools.',
-        },
-        {
-            icon: 'fa-solid fa-pen',
-            title: 'Quizzes & Flashcards',
-            description: 'Test your knowledge with customizable quizzes and flashcards. Tailor study materials to your subjects and learning style.',
-        },
-        {
-            icon: 'fa-solid fa-exchange-alt',
             title: 'Notes & Flashcards Sharing',
-            description: 'Share your notes and flashcards with others or browse shared content from fellow students.',
+            description: 'Share your notes and flashcards with others or browse content shared by fellow students to enhance your learning experience.',
+        },
+        {
+            icon: 'fa-solid fa-users-cog',
+            title: 'Collaborative Study Groups',
+            description: 'Form and join study groups with friends or classmates. Share resources, collaborate on projects, and participate in real-time discussions within the app.',
         },
     ];
+    
 
     const cardsRef = useRef([]);
 
