@@ -1,12 +1,16 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './aboutUs.css';
+import { Helmet } from 'react-helmet';
 
 const AboutUs = () => {
   const navigate = useNavigate();
 
   return (
     <div className="about-container">
+         <Helmet>
+        <title>Edusify - Founder</title>
+      </Helmet>
       <div className="about-content">
       <button className="back-button-abt" onClick={() => navigate(-1)}>
         ← 
