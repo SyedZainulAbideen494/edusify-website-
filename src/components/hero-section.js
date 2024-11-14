@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./HeroSection.css";
-import edusifyLogo from '../images/Edusify-removebg-preview.png'; // Ensure the correct path to your logo
-import Modal from './Modal'; // Import the Modal component
+import edusifyLogo from '../images/Edusify-removebg-preview.png';
+import Modal from './Modal';
 import Loader from "./Loader";
 import DownloadModal from "./downloadModal";
 import { API_ROUTES } from "../app_modules/apiRoutes";
+import { Link } from "react-router-dom"; // Ensure you have React Router installed for Link
 
 const HeroSection = () => {
   const [loading, setLoading] = useState(true);
@@ -13,6 +14,7 @@ const HeroSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [exitAnimation, setExitAnimation] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
+  const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false); // New state for burger menu
 
   const baseText = "Discover the future of";
   const texts = ["learning with AI", "education at your fingertips", "smart studying", "personalized knowledge", "intelligent growth"];
@@ -51,28 +53,25 @@ const HeroSection = () => {
   const handleAccept = () => {
     setShowCookieNotification(false);
   
-    // Collect additional data for cookie consent
     const cookieData = {
       cookieConsent: true,
       timestamp: new Date().toISOString(),
-      browser: navigator.userAgent, // Collect browser information
-      device: navigator.userAgent.includes("Mobile") ? "Mobile" : "Desktop", // Simple check for device type
-      ipAddress: "", // Placeholder for IP address
-      referrerUrl: document.referrer || "Direct Visit", // URL of the referrer
+      browser: navigator.userAgent,
+      device: navigator.userAgent.includes("Mobile") ? "Mobile" : "Desktop",
+      ipAddress: "",
+      referrerUrl: document.referrer || "Direct Visit",
     };
   
-    // Function to fetch IP address
     const fetchIPAddress = async () => {
       try {
         const response = await fetch('https://api.ipify.org?format=json');
         const data = await response.json();
-        cookieData.ipAddress = data.ip; // Assign the fetched IP address to cookieData
+        cookieData.ipAddress = data.ip;
       } catch (error) {
         console.error('Error fetching IP address:', error);
       }
     };
   
-    // Call the fetchIPAddress function and then send the cookie data
     fetchIPAddress().then(() => {
       fetch(API_ROUTES.cookiesCollect, {
         method: 'POST',
@@ -106,14 +105,34 @@ const HeroSection = () => {
     }, 1000);
   };
 
+  const toggleBurgerMenu = () => {
+    setIsBurgerMenuOpen(!isBurgerMenuOpen); // Toggle burger menu visibility
+  };
+
   return (
     <>
       {loading ? (
         <Loader />
       ) : (
         <section className={`hero__section ${fadeIn ? "fade-in" : ""} ${exitAnimation ? "fade-out" : ""}`}>
-          <header className="hero__header">
-            <img src={edusifyLogo} alt="Edusify Logo" className="edusify-logo" onClick={handleGetAppClick} />
+                  <header className="hero__header">
+            {/* Burger Icon */}
+            <div className="burger-menu" onClick={toggleBurgerMenu}>
+              <div className={`burger-line ${isBurgerMenuOpen ? "open" : ""}`}></div>
+              <div className={`burger-line ${isBurgerMenuOpen ? "open" : ""}`}></div>
+              <div className={`burger-line ${isBurgerMenuOpen ? "open" : ""}`}></div>
+            </div>
+
+            {/* Burger Menu Links */}
+            <div className={`burger-links ${isBurgerMenuOpen ? "open" : ""}`}>
+  <ul>
+    <li><Link to="/about-us" style={{textDecoration:'none', color: 'white'}}>About us</Link></li>
+    <li><Link to="/features" style={{textDecoration:'none', color: 'white'}}>Features</Link></li>
+    <li onClick={handleGetAppClick}>Android</li>
+    <li onClick={handleGetAppClick}>IOS</li>
+  </ul>
+</div>
+
             <button className="sign__up__button" onClick={handleGetAppClick}>Get App</button>
           </header>
 
@@ -125,10 +144,6 @@ const HeroSection = () => {
               </span>
             </p>
           </div>
-
-
-
-
 
           <DownloadModal isOpen={isModalOpen} onClose={handleCloseModal} />
         </section>

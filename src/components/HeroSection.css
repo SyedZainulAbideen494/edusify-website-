@@ -192,5 +192,82 @@ body {
   }
 }
 
-  
-  
+ /* Burger Menu Styles */
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25px; /* Slightly larger width for better visibility */
+  height: 20px; /* Slightly larger height */
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Smooth animation for transform */
+}
+
+.burger-line {
+  height: 3px; /* Maintain small line height */
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth rotation and opacity transition */
+}
+
+.burger-line.open:nth-child(1) {
+  transform: rotate(45deg); /* Top line rotates */
+  position: relative;
+  top: 6px; /* Adjust to create a 'X' effect */
+}
+
+.burger-line.open:nth-child(2) {
+  opacity: 0; /* Hide the middle line */
+}
+
+.burger-line.open:nth-child(3) {
+  transform: rotate(-45deg); /* Bottom line rotates */
+  position: relative;
+  top: -6px; /* Adjust to create a 'X' effect */
+}
+.burger-links {
+  position: absolute;
+  top: 50px; /* Adjust the position based on your needs */
+  left: 0;
+  background-color: #070707; /* Darker, more modern background */
+  border-radius: 8px; /* Softer rounded corners */
+  padding: 12px; /* Slightly larger padding */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+  opacity: 0;
+  transform: translateY(-30px); /* Initially hide the menu */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth fade-in and slide-up effect */
+  width: 200px; /* Set a fixed width */
+  z-index: 1000; /* Ensure the menu is above other content */
+}
+
+.burger-links.open {
+  opacity: 1;
+  transform: translateY(0); /* Slide the menu in */
+}
+
+.burger-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.burger-links li {
+  margin: 12px 0; /* Slightly larger margin */
+}
+
+.burger-links {
+  text-decoration: none;
+  color: #ecf0f1; /* Light color for text */
+  font-size: 16px; /* Larger font size for readability */
+  font-weight: 600; /* Bold text */
+  padding: 6px 12px; /* Add padding for clickable area */
+  border-radius: 4px; /* Slightly rounded corners for each link */
+  display: block;
+  transition: background-color 0.2s ease, color 0.2s ease; /* Smooth transition for background and text */
+}
+
+
+.burger-links a:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Add a soft blue shadow on focus */
+}

@@ -1,0 +1,91 @@
+/* AboutUs.css */
+
+:root {
+    --primary-bg: #1c1f24;
+    --secondary-bg: #2c2f36;
+    --primary-text: #ffffff;
+    --secondary-text: #b0b3b8;
+    --accent-color: #3498db;
+  }
+  
+  .back-button-abt {
+    background-color: transparent; /* Blue accent color */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .back-button-abt:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+  }
+  
+  
+  .about-container {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    background-color: var(--secondary-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-content h1 {
+    font-size: 28px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+  }
+  
+  .about-content h2 {
+    font-size: 22px;
+    color: var(--primary-text);
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .about-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--secondary-text);
+    margin-bottom: 20px;
+  }
+  
+  .about-content h1,
+  .about-content h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .about-content h1:not(:first-of-type) {
+    margin-top: 40px;
+    color: var(--primary-text);
+  }
+  
+  .about-content p:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  .about-content h1::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin-top: 5px;
+    border-radius: 3px;
+  }
+  
