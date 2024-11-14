@@ -1,0 +1,136 @@
+/* Testimonial Section Styles (for About Us) */
+.testimonial-section {
+    background-color: #000; /* Black background */
+    color: white;
+    padding: 40px 20px; /* Compact padding */
+    position: relative;
+    overflow: hidden; /* Prevent overflow for animations */
+}
+
+.container {
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto; /* Centering */
+    padding: 0 15px; /* Padding for smaller screens */
+}
+
+.testimonial-title {
+    font-size: 2rem; /* Smaller title */
+    text-align: center;
+    margin-bottom: 15px; /* Compact margin */
+    animation: fadeIn 1s ease-out 0.5s forwards; /* Added animation */
+    opacity: 0; /* For fade-in effect */
+}
+
+.founder-name {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.founder-description {
+    font-size: 1rem; /* Smaller description */
+    text-align: center;
+    margin-top: 15px;
+    color: #aaa;
+    animation: fadeIn 1s ease-out 0.7s forwards; /* Added animation */
+    opacity: 0; /* For fade-in effect */
+}
+
+.hero-buttons {
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* Instagram Follow Button */
+.instagram-follow-button {
+    background-color: #ffffff; /* Instagram color */
+    color: rgb(0, 0, 0); /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+
+
+/* Fade-in animations */
+.fade-in {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.animate {
+    opacity: 1; /* Fully visible when animated */
+    transform: translateY(0); /* Reset position */
+}
+
+.fade-in-bottom {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-bottom.animate {
+    opacity: 1; /* Fully visible when animated */
+    transform: translateY(0); /* Reset position */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .testimonial-title {
+        font-size: 1.75rem; /* Adjust title size for smaller screens */
+    }
+
+    .founder-description {
+        font-size: 0.9rem; /* Adjust description size for smaller screens */
+    }
+
+    .instagram-follow-button {
+        font-size: 0.9rem; /* Smaller button text for mobile */
+        padding: 8px 15px; /* Adjust button padding for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-title {
+        font-size: 1.5rem; /* Further adjust title size */
+    }
+
+    .founder-description {
+        font-size: 0.8rem; /* Further adjust description size */
+    }
+
+    .instagram-follow-button {
+        font-size: 0.8rem; /* Smaller button text */
+        padding: 6px 12px; /* Further adjust button padding */
+    }
+}
+
+/* Fade-in animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

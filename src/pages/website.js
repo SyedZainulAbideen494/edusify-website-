@@ -7,6 +7,7 @@ import FAQSection from '../components/FAQSection';
 import CallToActionWithFooter from '../components/cta-footer';
 import InspirationSection from '../components/InspirationSection';
 import SuggestionForm from '../components/SuggestionForm';
+import AboutUs from '../components/aboutUs';
 
 function Website() {
   const [isInAppBrowser, setIsInAppBrowser] = useState(false);
@@ -68,6 +69,7 @@ function Website() {
       <HeroSection />
       <InspirationSection />
       <FeaturesOverview />
+      <AboutUs/>
       <TestimonialSection />
       <SuggestionForm />
       <FAQSection />
