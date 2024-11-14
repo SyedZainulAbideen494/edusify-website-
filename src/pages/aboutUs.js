@@ -21,9 +21,7 @@ const AboutUs = () => {
             "affiliation": {
               "@type": "Organization",
               "name": "Edusify"
-            },
-            "url": "https://yourwebsite.com/about-us", // replace with actual URL
-            "sameAs": ["https://www.linkedin.com/in/syed-zain-ul-abideen/"], // add any relevant profiles
+            }
           })}
         </script>
       </Helmet>
