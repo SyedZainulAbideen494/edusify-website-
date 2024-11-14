@@ -8,8 +8,24 @@ const AboutUs = () => {
 
   return (
     <div className="about-container">
-         <Helmet>
-        <title>Edusify - Founder</title>
+      <Helmet>
+        <title>Edusify - Founder | Syed Zain-ul-Abideen</title>
+        <meta name="description" content="Meet Syed Zain-ul-Abideen, founder and CEO of Edusify, an innovative productivity app revolutionizing student life." />
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "Person",
+            "name": "Syed Zain-ul-Abideen",
+            "jobTitle": "Founder & CEO",
+            "affiliation": {
+              "@type": "Organization",
+              "name": "Edusify"
+            },
+            "url": "https://yourwebsite.com/about-us", // replace with actual URL
+            "sameAs": ["https://www.linkedin.com/in/syed-zain-ul-abideen/"], // add any relevant profiles
+          })}
+        </script>
       </Helmet>
       <div className="about-content">
       <button className="back-button-abt" onClick={() => navigate(-1)}>
