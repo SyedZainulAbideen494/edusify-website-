@@ -1,48 +1,44 @@
 import React from 'react';
-import './aboutUs.css';
+import './aboutUs.css'; // Ensure this CSS file contains your provided styles
 
 const AboutUs = () => {
-  // Founder data is embedded directly in the component
-  const founderInfo = {
-    name: "Syed Zain-ul-Abideen",
-    title: "Founder & CEO of Edusify",
-    bio: `
-      Syed Zain-ul-Abideen is the visionary founder and CEO of Edusify, an innovative productivity app designed to streamline the academic experience for students. Despite a humble beginning as an average student, Zain-ul-Abideen's passion for solving common student challenges led to the creation of Edusify. The app offers tools like task management, flashcards, note-taking, and more to help students stay organized and improve their productivity.
-    `,
-    achievements: [
-      "Founded Edusify, a $2M valued app.",
-      "Launched Edusify with over 1,500 users and 100+ daily active users.",
-      "Developed key features like AI assistant, Pomodoro timer, flashcards, and document locker."
-    ],
-    vision: `
-      Zain-ul-Abideen’s vision is to constantly improve the student experience by listening to feedback and integrating helpful features. The aim is to create a platform that not only helps students manage their tasks but also motivates them to succeed academically.
-    `,
-    socialLinks: {
-      linkedin: "https://www.linkedin.com/in/syedzainulabideen/",
-      twitter: "https://twitter.com/syedzainulabideen",
-    }
-  };
-
   return (
     <div className="about-us-container">
       <div className="container">
-        <h2 className="about-us-title">About the Founder</h2>
+        <h1 className="about-us-title">About Us</h1>
         <div className="founder-info">
-          <h3 className="founder-name">{founderInfo.name}</h3>
-          <p className="founder-title">{founderInfo.title}</p>
-          <p className="founder-description">{founderInfo.bio}</p>
-
-          <h4 style={{ marginTop: '30px', marginBottom: '30px' }}>Achievements:</h4>
-          <ul>
-            {founderInfo.achievements.map((achievement, index) => (
-              <li className="achievement-item" key={index}>{achievement}</li>
-            ))}
-          </ul>
-
-          <h4 style={{ marginTop: '30px', marginBottom: '30px' }}>Vision:</h4>
-          <p>{founderInfo.vision}</p>
-
-
+          <h2 className="founder-name">Syed Zain-ul-Abideen</h2>
+          <h3 className="founder-title">Founder & CEO of Edusify</h3>
+          <p className="founder-description">
+            Welcome to <strong>Edusify</strong>, your ultimate student productivity app designed to make studying smarter, more organized, and stress-free.
+            <br />
+            Despite being an average student with no prior experience in app development, Syed’s determination to solve everyday student struggles led to the creation of Edusify—a platform that combines essential study tools in one seamless app.
+          </p>
+        </div>
+        <h2 className="achievements-title">Our Goal</h2>
+        <p className="vision-text">
+          At Edusify, our goal is simple: to help students stay productive, focused, and on top of their academic game. We aim to simplify your student life while keeping you motivated and engaged.
+        </p>
+        <h2 className="vision-title">Our Vision</h2>
+        <p className="vision-text">
+          Our vision is to create a world where every student has the tools they need to succeed at their fingertips. By integrating cutting-edge AI technology and user feedback, we strive to make Edusify more than just an app—it’s your personal academic assistant.
+        </p>
+        <h2 className="achievements-title">Why Edusify?</h2>
+        <ul className="achievements-list">
+          <li className="achievement-item">
+            <strong>All-in-One Solution:</strong> No need to juggle multiple apps for planning, notes, quizzes, or flashcards. Edusify puts everything in one place.
+          </li>
+          <li className="achievement-item">
+            <strong>AI-Powered Efficiency:</strong> Save time with AI-generated tasks, notes, and quizzes tailored to your needs.
+          </li>
+          <li className="achievement-item">
+            <strong>Student-Centered Design:</strong> Built with feedback from real students, Edusify evolves with you to ensure the best experience.
+          </li>
+        </ul>
+        <div className="social-links">
+          <a href="#facebook" target="_blank" rel="noopener noreferrer">
+            Instagram
+         </a>
         </div>
       </div>
     </div>
