@@ -53,7 +53,7 @@ const AboutUs = () => {
         </p>
 
         <p>
-          The app has quickly gained traction, with over 1,500 users in its first month and a $2 million valuation, based purely on user engagement and the app's unique features. By continuously evolving and adapting to user feedback, Edusify strives to be a reliable tool for students to manage their academic lives more effectively.
+          The app has quickly gained traction, with over 600 users in its first month and a $2 million valuation, based purely on user engagement and the app's unique features. By continuously evolving and adapting to user feedback, Edusify strives to be a reliable tool for students to manage their academic lives more effectively.
         </p>
 
         <h2>Key Features of Edusify</h2>
