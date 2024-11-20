@@ -69,7 +69,6 @@ function Website() {
       <HeroSection />
       <InspirationSection />
       <FeaturesOverview />
-      <AboutUs/>
       <TestimonialSection />
       <SuggestionForm />
       <FAQSection />
