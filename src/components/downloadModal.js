@@ -2,6 +2,7 @@ import React from 'react';
 import './DownloadModal.css'; // Update this CSS file accordingly
 import { FaApple, FaAndroid, FaDownload, FaGlobe } from 'react-icons/fa';
 import { API_ROUTES } from '../app_modules/apiRoutes';
+import { FaWebAwesome } from 'react-icons/fa6';
 
 const DownloadModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -40,7 +41,14 @@ const DownloadModal = ({ isOpen, onClose }) => {
             <FaApple /> <span className="button-text">iOS</span>
           </a>
 
-         
+          <a
+            href="https://edusify.vercel.app/"
+            className="download-button ios"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWebAwesome /> <span className="button-text">Web</span>
+          </a>
         </div>
       </div>
     </div>
