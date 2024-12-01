@@ -47,7 +47,7 @@ const DownloadModal = ({ isOpen, onClose }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaWebAwesome /> <span className="button-text">Web</span>
+            <FaGlobe /> <span className="button-text">Web</span>
           </a>
         </div>
       </div>
