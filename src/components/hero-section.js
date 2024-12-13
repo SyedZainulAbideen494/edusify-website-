@@ -132,8 +132,17 @@ const HeroSection = () => {
     <li onClick={handleGetAppClick}>IOS</li>
   </ul>
 </div>
+            <button type="button" className="btn" onClick={handleGetAppClick}>
+      <strong>Get App</strong>
+      <div id="container-stars">
+        <div id="stars"></div>
+      </div>
 
-            <button className="sign__up__button" onClick={handleGetAppClick}>Get App</button>
+      <div id="glow">
+        <div className="circle"></div>
+        <div className="circle"></div>
+      </div>
+    </button>
           </header>
 
           <div className="hero__content">
