@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -7,20 +7,17 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import "./App.css";
-import Website from "./pages/website";
-import AboutUs from "./pages/aboutUs";
-import Features from "./pages/features";
-import Blog1 from "./blogs/blog1";
-
+import HomeWebApp from "./pages/websiteHome";
+import DownloadPage from "./pages/DownloadPage";
 const router = createBrowserRouter([
-  {path: '/', element: <Website/>},
-  {path:'/features', element: <Features/>},
-  {path:'/about-us',element: <AboutUs/>},
-  {path: '/blog1', element: <Blog1/>},
+  {path: '/', element: <HomeWebApp/>},
+  {path: '/get-app', element: <DownloadPage/>}
+
 ]);
 
 
 function App() {
+
   return (
     <div>
       <RouterProvider router={router} />

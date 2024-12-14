@@ -1,0 +1,121 @@
+/* Download Page Styling */
+.download__page {
+  background-color: #f4f4f4; /* Light background color */
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.download__container {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.download__header {
+  margin-bottom: 30px;
+}
+
+.download__heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2563eb; /* Blue for heading */
+  margin-bottom: 10px;
+}
+
+.download__subheading {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* Download Options */
+.download__options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Remove underlines from links */
+.download__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Individual Download Option */
+.download__option {
+  width: 260px;
+  margin-bottom: 30px;
+}
+
+/* Download Card */
+.download__card {
+  background: linear-gradient(135deg, #3b82f6, #2563eb); /* Gradient Background */
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.download__card:hover {
+  transform: scale(1.05);
+}
+
+.download__icon {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.download__platform {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.download__description {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.download__btn {
+  background-color: white;
+  color: #2563eb;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download__btn:hover {
+  background-color: #2563eb;
+  color: white;
+  box-shadow: 0px 8px 15px rgba(37, 99, 235, 0.3);
+  transform: translateY(-2px);
+}
+
+.download__btn:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .download__options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .download__option {
+    width: 100%;
+  }
+}

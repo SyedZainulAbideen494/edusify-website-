@@ -1,0 +1,171 @@
+/* CTA Section 6 */
+.cta-section-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    min-height: 600px; /* Increase min-height for better spacing */
+    border-radius: 15px;
+  }
+  
+  /* Card Styling */
+  .cta-card-6 {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+
+  
+/* Toggle Button Container */
+.cta-toggle-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+    width: 80%;
+    position: relative;
+  }
+  
+  /* Sliding Effect for Toggle Button */
+  .cta-toggle-btn-container {
+    display: flex;
+    position: relative;
+    width: 80%;
+    max-width: 330px; /* Increased width */
+    background-color: #2563eb; /* Background color for toggle */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out;
+    overflow: hidden; /* Ensure the button stays within the container */
+  }
+  
+  /* Toggle button movement (left/right sliding) */
+  .cta-toggle-btn-container.left {
+    justify-content: flex-start;
+  }
+  
+  .cta-toggle-btn-container.right {
+    justify-content: flex-end;
+  }
+  
+  /* Individual Button Styling */
+  .cta-toggle-btn-left {
+    background-color: #fff; /* White background for each button */
+    color: #2563eb;
+    border: none;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding: 15px 35px; /* Increased padding for better click target */
+    font-size: 0.7rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    position: relative;
+    z-index: 2; /* Ensure buttons appear above the background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a slight shadow to give depth */
+  }
+  
+  /* Active Button Styling */
+  .cta-toggle-btn-left.active {
+    background-color: #2563eb; /* Blue background for active button */
+    color: #fff; /* White text for active button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Deeper shadow for active button */
+  }
+
+   /* Individual Button Styling */
+   .cta-toggle-btn-right {
+    background-color: #fff; /* White background for each button */
+    color: #2563eb;
+    border: none;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 15px 35px; /* Increased padding for better click target */
+    font-size: 0.7rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    position: relative;
+    z-index: 2; /* Ensure buttons appear above the background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a slight shadow to give depth */
+  }
+  
+  /* Active Button Styling */
+  .cta-toggle-btn-right.active {
+    background-color: #2563eb; /* Blue background for active button */
+    color: #fff; /* White text for active button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Deeper shadow for active button */
+  }
+  
+  /* Hover Styling for Inactive Button */
+  .cta-toggle-btn:not(.active):hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  
+  /* Text Styling */
+  .cta-text-6 h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+  }
+  
+  .cta-text-6 ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .cta-text-6 ul li {
+    font-size: 1.1rem;
+    margin: 12px 0;
+    color: #555;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Custom Bullet Points */
+  .cta-text-6 ul li::before {
+    content: "•";
+    color: #2563eb; /* Blue bullet points */
+    margin-right: 12px;
+    font-size: 1.4rem;
+  }
+  
+  /* Mobile Responsiveness */
+  @media screen and (max-width: 768px) {
+    .cta-card-6 {
+      width: 90%;
+      padding: 25px;
+    }
+  
+    .cta-text-6 h2 {
+      font-size: 1.5rem;
+    }
+  
+    .cta-text-6 ul li {
+      font-size: 1rem;
+    }
+  
+    .cta-toggle-btn-container {
+      max-width: 280px; /* Adjust max width for smaller screens */
+    }
+  
+    .cta-toggle-btn {
+      padding: 12px 28px; /* Adjust padding for mobile view */
+    }
+  }
+  

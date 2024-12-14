@@ -1,0 +1,121 @@
+/* How to Study for Exams with Edusify Section */
+.how__to__study__section {
+    background-color: #f9fafb; /* Light background for the section */
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.how__to__study__section__content {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+}
+
+.how__to__study__section__title h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e3a8a; /* Blue color */
+    margin-bottom: 20px;
+}
+
+.how__to__study__section__subtitle p {
+    font-size: 1.2rem;
+    color: #555;
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+/* Feature Cards */
+.how__to__study__section__features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.how__to__study__section__feature__card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.how__to__study__section__feature__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Feature Icons */
+.how__to__study__section__feature__icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;  /* Auto margin to center the icon horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e3a8a; /* Blue icon background */
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/* Feature Titles */
+.how__to__study__section__feature__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+/* Feature Descriptions */
+.how__to__study__section__feature__description {
+    font-size: 1rem;
+    color: #555;
+    opacity: 0.8;
+}
+
+/* Final Button */
+.how__to__study__section__cta__container {
+    margin-top: 40px;
+}
+
+.how__to__study__section__cta__button {
+    background-color: #1e3a8a;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.how__to__study__section__cta__button:hover {
+    background-color: #2563eb;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .how__to__study__section__title h2 {
+        font-size: 2rem;
+    }
+
+    .how__to__study__section__subtitle p {
+        font-size: 1rem;
+    }
+
+    .how__to__study__section__features {
+        flex-direction: column;
+    }
+
+    .how__to__study__section__feature__card {
+        width: 100%;
+    }
+}

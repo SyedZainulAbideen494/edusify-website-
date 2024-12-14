@@ -1,0 +1,215 @@
+/* Header Section */
+.header-section {
+  background: linear-gradient(135deg, #f8fbff, #e0ebff);
+  min-height: 100vh; /* Ensure it takes full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure content is spaced correctly */
+  padding: 0; /* Remove any default padding */
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 24px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  width: 100%; /* Make navbar full width */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar .logo img {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+  margin-top: 6px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-button {
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #2563eb;
+}
+
+.menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 120px 20px 80px; /* Adjust padding to avoid overlap with navbar */
+  margin-top: 60px; /* Add margin-top to prevent content being hidden behind fixed navbar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh; /* Ensure hero section fills remaining screen space */
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1e293b;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero-title span {
+  color: #3b82f6;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: #475569;
+  margin-bottom: 24px;
+}
+
+.user-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.user-images {
+  display: flex;
+}
+
+.user-images img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  margin-left: -8px;
+  background-color: #ddd;
+}
+
+.user-images img:first-child {
+  margin-left: 0;
+}
+
+.stats-text {
+  font-size: 0.9rem;
+  text-align: left;
+  color: #334155;
+}
+/* Center the button container */
+.button-container__hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Button Styling */
+.btn__website__ehro__get__started__btn {
+  --color: #3d8bfd;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+  border: none;
+  background-color: transparent;
+  filter: brightness(1.4); /* Make the button look brighter by default */
+  transform: scale(1.1); /* Make the button slightly larger by default */
+}
+
+.btn__website__ehro__get__started__btn div {
+  letter-spacing: 2px;
+  font-weight: bold;
+  background: var(--color);
+  border-radius: 2rem;
+  color: white;
+  width: 250px;
+  padding: 1rem;
+}
+
+.btn__website__ehro__get__started__btn::before {
+  content: '';
+  z-index: -1;
+  background-color: var(--color);
+  border: 2px solid white;
+  border-radius: 2rem;
+  width: 110%;
+  height: 100%;
+  position: absolute;
+  transform: rotate(10deg);
+  transition: .5s;
+  opacity: 0.2;
+}
+
+.btn__website__ehro__get__started__btn:hover {
+  cursor: pointer;
+  filter: brightness(1.4); /* Maintain the brightness on hover */
+  transform: scale(1.1); /* Maintain the scale on hover */
+}
+
+.btn__website__ehro__get__started__btn:hover::before {
+  transform: rotate(0deg);
+  opacity: 1;
+}
+
+.btn__website__ehro__get__started__btn svg {
+  transform: translateX(-200%);
+  transition: .5s;
+  width: 0;
+  opacity: 0;
+}
+
+.btn__website__ehro__get__started__btn:hover svg {
+  width: 25px;
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.btn__website__ehro__get__started__btn:active {
+  filter: brightness(1.4); /* Keep the active brightness */
+  transform: scale(1.1); /* Keep the active scale */
+}
+
+
+/* Ensure full screen for mobile */
+@media screen and (max-width: 768px) {
+  .hero-section {
+    padding: 100px 20px 40px; /* Adjust padding for mobile */
+    margin-top: 0; /* Remove margin-top for mobile */
+  }
+
+  .hero-title {
+    font-size: 2rem; /* Slightly smaller font size on mobile */
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem; /* Smaller subtitle font on mobile */
+  }
+
+  .btn__website__ehro__get__started__btn div {
+    width: 200px; /* Adjust button width for mobile */
+    padding: 0.8rem; /* Adjust padding for mobile */
+  }
+}

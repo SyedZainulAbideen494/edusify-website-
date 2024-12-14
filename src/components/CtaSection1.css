@@ -1,0 +1,62 @@
+/* CTA Section 1 */
+.cta-section-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; /* Light gray background for the section */
+    padding: 20px;
+  }
+  
+  .cta-card {
+    position: relative;
+    width: 340px; /* Instagram Story aspect ratio (scaled down) */
+    background: linear-gradient(135deg, #3b82f6, #2563eb); /* Gradient Background */
+    color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Text Styling */
+  .cta-text h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .cta-text p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    opacity: 0.9;
+  }
+  
+  /* CTA Button */
+  .cta-button .cta-btn {
+    background-color: #ffffff;
+    color: #2563eb;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+  }
+  
+  .cta-button .cta-btn:hover {
+    background-color: #2563eb;
+    color: #fff;
+    box-shadow: 0px 8px 15px rgba(37, 99, 235, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .cta-button .cta-btn:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+  

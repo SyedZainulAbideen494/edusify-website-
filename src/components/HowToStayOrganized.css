@@ -1,0 +1,200 @@
+/* How to Stay Organized Section */
+.how__to__Sec__org {
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f7fb; /* Light blue background */
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+.how__to__Sec__org__content {
+    max-width: 900px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.how__to__Sec__org__title h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #4c1d95; /* Purple color */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.how__to__Sec__org__title p {
+    font-size: 1rem;
+    text-align: center;
+    color: #555;
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+/* Steps Container */
+.how__to__Sec__org__steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.how__to__Sec__org__step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Step Number Circle */
+.how__to__Sec__org__step__number {
+    background-color: #4c1d95; /* Purple background for the number */
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 20px;
+    z-index: 2;
+}
+
+/* Step Description */
+.how__to__Sec__org__step__description {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.how__to__Sec__org__step__description h3 {
+    font-size: 1.25rem;
+    color: #4c1d95;
+    margin-bottom: 10px;
+}
+
+.how__to__Sec__org__step__description p {
+    font-size: 1rem;
+    color: #555;
+    opacity: 0.8;
+}
+
+/* Connector Line */
+.how__to__Sec__org__line__connector {
+    width: 2px;
+    height: 40px;
+    background-color: #4c1d95;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.how__to__Sec__org__steps .how__to__Sec__org__step:last-child .how__to__Sec__org__line__connector {
+    display: none;
+}
+
+/* Final Button Section */
+.how__to__Sec__org__button__container {
+    margin-top: 30px;
+}
+
+.how__to__Sec__org__cta__button {
+    background-color: #4c1d95; /* Purple color */
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.how__to__Sec__org__cta__button:hover {
+    background-color: #6a1b9a;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .how__to__Sec__org {
+        padding: 30px 10px;
+    }
+
+    .how__to__Sec__org__content {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    .how__to__Sec__org__title h2 {
+        font-size: 1.75rem;
+    }
+
+    .how__to__Sec__org__title p {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    .how__to__Sec__org__steps {
+        margin-top: 20px;
+    }
+
+    .how__to__Sec__org__step {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .how__to__Sec__org__step__number {
+        margin-bottom: 15px;
+    }
+
+    .how__to__Sec__org__step__description {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .how__to__Sec__org__line__connector {
+        height: 30px;
+    }
+
+    .how__to__Sec__org__button__container {
+        margin-top: 20px;
+    }
+
+    .how__to__Sec__org__cta__button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .how__to__Sec__org__title h2 {
+        font-size: 1.5rem;
+    }
+
+    .how__to__Sec__org__title p {
+        font-size: 0.9rem;
+    }
+
+    .how__to__Sec__org__step__number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.25rem;
+    }
+
+    .how__to__Sec__org__step__description h3 {
+        font-size: 1.1rem;
+    }
+
+    .how__to__Sec__org__step__description p {
+        font-size: 0.9rem;
+    }
+
+    .how__to__Sec__org__cta__button {
+        padding: 8px 15px;
+        font-size: 0.95rem;
+    }
+}

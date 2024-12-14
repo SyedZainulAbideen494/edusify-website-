@@ -1,28 +1,11 @@
-body {
+/* General Reset */
+* {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Custom Scrollbar */
-body::-webkit-scrollbar {
-  width: 12px;
-  border-radius: 12px;
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: #f8f9fa;
 }
-
-body::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 25px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
-  border: 2px solid #f1f1f1;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-
-

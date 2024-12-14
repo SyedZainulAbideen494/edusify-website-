@@ -1,0 +1,84 @@
+/* CTA Section 3 */
+.cta-section-3__cta__3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0f7fa; /* Light blue background for the section */
+    padding: 20px;
+  }
+  
+  .cta-card__cta__3 {
+    position: relative;
+    width: 340px; /* Instagram Story aspect ratio (scaled down) */
+    background: linear-gradient(135deg, #0787ff, #2595ff); /* Purple gradient */
+    color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  /* Text Styling */
+  .cta-text__cta__3 h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .cta-text__cta__3 p {
+    font-size: 0.9rem;
+    text-align: left;
+    line-height: 1.4;
+    opacity: 0.9;
+  }
+  
+  /* Features List */
+  .cta-features__cta__3 {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .cta-features__cta__3 li {
+    font-size: 1rem;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkmark__cta__3 {
+    color: #ffffff;
+    margin-right: 10px;
+    font-size: 1.2rem;
+  }
+  
+  /* CTA Button */
+  .cta-button__cta__3 .cta-btn__cta__3 {
+    background-color: #ffffff;
+    color: #2595ff; /* Matching the purple gradient color */
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+  }
+  
+  .cta-button__cta__3 .cta-btn__cta__3:hover {
+    background-color: #2595ff;
+    color: #fff;
+    box-shadow: 0px 8px 15px rgba(46, 150, 235, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .cta-button__cta__3 .cta-btn__cta__3:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+  

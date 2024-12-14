@@ -1,0 +1,76 @@
+/* CTA Section 2 */
+.cta-section-2__cta__2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; /* Light gray background for the section */
+    padding: 20px;
+}
+
+.cta-card__cta__2 {
+    position: relative;
+    width: 340px; /* Instagram Story aspect ratio (scaled down) */
+    background: linear-gradient(135deg, #9b4dca, #6a1b9a); /* Purple gradient */
+    color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* PDF Icon Styling */
+.cta-icon__cta__2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.cta-icon__cta__2 svg {
+    width: 48px;
+    height: 48px;
+    fill: #ffffff;
+    opacity: 0.9;
+}
+
+/* Text Styling */
+.cta-text__cta__2 h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.cta-text__cta__2 p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+/* CTA Button */
+.cta-button__cta__2 .cta-btn__cta__2 {
+    background-color: #ffffff;
+    color: #9b4dca; /* Matching the purple gradient color */
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.cta-button__cta__2 .cta-btn__cta__2:hover {
+    background-color: #9b4dca;
+    color: #fff;
+    box-shadow: 0px 8px 15px rgba(155, 77, 202, 0.3);
+    transform: translateY(-2px);
+}
+
+.cta-button__cta__2 .cta-btn__cta__2:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}

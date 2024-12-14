@@ -1,65 +1,34 @@
-/* Features Overview Section */
-.features__section {
-    padding: 50px 20px;
-    background-color: #000; /* Background color */
-    color: #fff; /* Text color */
-    text-align: center;
-}
-
-.features__header {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem; /* Smaller font size for header */
-    margin-bottom: 30px;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(-20px); /* Start higher */
-    animation: fadeInUp 0.8s forwards; /* Slower animation for header */
-}
-
-.features__grid {
-    display: inline-block;
-    gap: 20px;
-    margin: 0 auto; /* Center grid */
-}
-
-.feature__card {
-    background-color: #0a0a0a; /* Darker card background */
-    border-radius: 15px;
-    padding: 15px;
-    margin: 40px 20px; /* Margin on sides */
-    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Slower transition for hover effects */
-    overflow: hidden;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(20px); /* Start lower */
-}
-
-.feature__card.in-view {
-    opacity: 1; /* Fade in when in view */
-    transform: translateY(0); /* Move to original position */
-}
-
-
-.feature__title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem; /* Smaller title */
-    color: #fff; /* White color for titles */
-    margin: 10px 0; /* Adjusted margin */
-}
-
-.feature__description {
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.8rem; /* Smaller description */
-    margin-top: 30px;
-    color: #ddd; /* Light grey for descriptions */
-}
-
-/* Fade-in animation */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px); /* Start lower */
-    }
-    100% {
-        opacity: 1; /* Fully visible */
-        transform: translateY(0); /* Move to original position */
-    }
-}
+/* Features Section */
+.features-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    height: 100%; /* Make the section take up full height */
+    background-color: #f4f4f4; /* Light background color */
+  }
+  
+  /* Heading Styles */
+  .features-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Container for images */
+  .features-images {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap; /* Allow images to wrap if the screen is small */
+  }
+  
+  /* Image Styles */
+  .feature-image {
+    width: auto;
+    height: 100%; /* Maintain aspect ratio while filling the container's height */
+    max-width: 90vw; /* Ensure images don't overflow the screen width */
+    object-fit: cover; /* Crop the image to fill the space while maintaining the aspect ratio */
+    border-radius: 25px;
+  }
+  

@@ -1,85 +1,94 @@
-import React, { useState } from 'react';
-import './FAQSection.css'; // Import the CSS for styling
+import React, { useState } from "react";
+import "./FaqSection.css";
 
-const faqData = [
-  { 
-    question: 'I downloaded Edusify, but it’s not displaying on my phone. What should I do?', 
-    answer: 'After downloading Edusify on Android, you need to install it manually. Go to your downloads folder, tap the file, and install it.' 
-  },
-  { 
-    question: 'What is Edusify?', 
-    answer: 'Edusify is an all-in-one study companion that helps students manage tasks, collaborate with peers, and improve their learning with AI-powered features.' 
-  },
-  { 
-    question: 'Is Edusify free to use?', 
-    answer: 'Edusify offers both a free plan with basic features and a premium plan for more advanced tools like unlimited flashcards and AI-generated study timetables.' 
-  },
-  { 
-    question: 'What platforms is Edusify available on?', 
-    answer: 'Currently, Edusify is available on Android and through the web. We are working to expand to iOS soon.' 
-  },
-  { 
-    question: 'How do I create or join study groups in Edusify?', 
-    answer: 'You can create or join study groups from the "Study Groups" section in the app. Just search for public groups or start your own private group.' 
-  },
-  { 
-    question: 'How can I share my flashcards or notes with friends?', 
-    answer: 'You can share your flashcards, notes, or quizzes directly in study groups or by sharing a link to the material from within the app.' 
-  },
-  { 
-    question: 'How does the AI Solver work in Edusify?', 
-    answer: 'The AI Solver helps solve problems in subjects like math and science. Simply input your question, and the AI will generate solutions along with explanations.' 
-  },
-  { 
-    question: 'Does Edusify send reminders for tasks and events?', 
-    answer: 'Yes! Edusify sends email reminders at 7 AM, 3 PM, and 9 PM IST for any upcoming tasks or events that are due within 3 days.' 
-  },
-  { 
-    question: 'Can I use Edusify offline?', 
-    answer: 'Yes, you can download flashcards and notes as PDFs to access them offline.' 
-  },
-  { 
-    question: 'How do I upgrade to Edusify Premium?', 
-    answer: 'You can upgrade to Edusify Premium from the app’s settings. It offers additional features like AI-generated study plans and unlimited flashcards.' 
+const FaqSection = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleAnswer = (index) => {
+    if (activeIndex === index) {
+      setActiveIndex(null);
+    } else {
+      setActiveIndex(index);
+    }
   }
-];
 
-const FAQSection = () => {
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleFAQ = index => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+  const faqData = [
+    {
+      question: "What is Edusify?",
+      answer:
+        "Edusify is a student productivity app that combines essential study tools into a single platform to simplify student life and boost academic performance.",
+    },
+    {
+      question: "How do I create an account?",
+      answer:
+        "To create an account, first download the app by clicking on the 'Get App' button at the top right. Once you download the app, you will automatically be directed to the sign-up interface the first time you open it.",
+    },
+    {
+      question: "Can I use Edusify for team studies?",
+      answer:
+        "Yes, Edusify allows you to create 'Rooms' where you can invite your peers to collaborate on projects, share notes, quizzes, and track progress.",
+    },
+    {
+      question: "Is Edusify free?",
+      answer:
+        "Yes, Edusify is completely free to use. We are currently offering all features for free and will introduce premium options in the future.",
+    },
+    {
+      question: "How can I contact support?",
+      answer:
+        "You can contact our support team by emailing us at edusyfy@gmail.com. We're always here to assist you with any questions or issues.",
+    },
+    {
+      question: "How do I download Edusify?",
+      answer:
+        "To download Edusify, click on the 'Get App' button at the top right of the website. You can then download the app for your platform and start using it right away.",
+    },
+    {
+      question: "How do I reset my password?",
+      answer:
+        "If you've forgotten your password, click on the 'Forgot Password' link on the sign-in page. Enter your registered email address, and we'll send you instructions to reset your password.",
+    },
+    {
+      question: "Will there be a premium version of Edusify?",
+      answer:
+        "Currently, Edusify is completely free to use. We plan to introduce a premium version with additional features in the future, but for now, all features are available to everyone at no cost.",
+    },
+    {
+      question: "Can I share my notes with others?",
+      answer:
+        "Yes, Edusify allows you to share your notes with others by using the 'Rooms' feature. You can collaborate with peers and share resources seamlessly.",
+    },
+  ];
+  
 
   return (
-    <div className="faq-section">
-      <h2>FAQ</h2>
-      <div className="faq-list">
-        {faqData.map((item, index) => (
-          <div key={index} className="faq-item">
-            <div className="faq-question" onClick={() => toggleFAQ(index)}>
-              <h4>{item.question}</h4>
-              <span className={`arrow ${openIndex === index ? 'open' : ''}`}>
-                {/* SVG arrow */}
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  width="24" 
-                  height="24" 
-                  viewBox="0 0 24 24"
-                  className={`arrow-icon ${openIndex === index ? 'open' : ''}`}
-                >
-                  <path d="M7 10l5 5 5-5z" />
-                </svg>
-              </span>
+    <section className="faq__Faq__page">
+      <div className="faq__Faq__page__container">
+        <h2 className="faq__Faq__page__title">Frequently Asked Questions</h2>
+        {faqData.map((faq, index) => (
+          <div
+            key={index}
+            className={`faq__Faq__page__item ${
+              activeIndex === index ? "active" : ""
+            }`}
+          >
+            <div
+              className="faq__Faq__page__header"
+              onClick={() => toggleAnswer(index)}
+            >
+              <div className="faq__Faq__page__icon">
+                <i className="fas fa-question-circle"></i>
+              </div>
+              <h3 className="faq__Faq__page__question">{faq.question}</h3>
             </div>
-            <div className={`faq-answer ${openIndex === index ? 'show' : ''}`}>
-              <p>{item.answer}</p>
+            <div className="faq__Faq__page__answer">
+              <p>{faq.answer}</p>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
-export default FAQSection;
+export default FaqSection;
