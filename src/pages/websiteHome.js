@@ -8,9 +8,9 @@ import HowToStudy from '../components/HowToStudy';
 import CtaSection4 from '../components/CtaSection4';
 import CtaSection5 from '../components/CtaSection5';
 import CtaSection6 from '../components/CtaSection6';
-import FaqSection from '../components/FaqSection';
 import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
+import FaqSection from '../components/FaqSection';
 
 function HomeWebApp() {
   return (
