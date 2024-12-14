@@ -11,6 +11,8 @@ import CtaSection6 from '../components/CtaSection6';
 import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
 import FaqSection from '../components/faqSections';
+import Section1 from '../components/Section1';
+import Testimonials from '../components/Testimonials';
 
 
 function HomeWebApp() {
@@ -25,8 +27,10 @@ function HomeWebApp() {
       <CtaSection3/>
       <CtaSection5/>
       <CtaSection4/>
+      <Section1/>
       <CtaSection6/>
-    <FaqSection/>
+      <Testimonials/>
+          <FaqSection/>
       <CallToAction/>
       <Footer/>
     </div>

@@ -1,0 +1,24 @@
+/* Section 1 Styling */
+.section_1 {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4; /* Light background */
+  }
+  
+  .section_1__container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .section_1__image {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
