@@ -28,7 +28,7 @@
     width: auto;
     height: 100%; /* Maintain aspect ratio while filling the container's height */
     max-width: 90vw; /* Ensure images don't overflow the screen width */
-    object-fit: cover; /* Crop the image to fill the space while maintaining the aspect ratio */
+    object-fit: cover; 
     border-radius: 25px;
   }
   
