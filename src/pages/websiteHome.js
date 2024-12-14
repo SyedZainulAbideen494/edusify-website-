@@ -10,6 +10,7 @@ import CtaSection5 from '../components/CtaSection5';
 import CtaSection6 from '../components/CtaSection6';
 import CallToAction from '../components/CallToAction';
 import Footer from '../components/Footer';
+import FaqSection from '../components/faqSections';
 
 
 function HomeWebApp() {
@@ -25,7 +26,7 @@ function HomeWebApp() {
       <CtaSection5/>
       <CtaSection4/>
       <CtaSection6/>
-
+    <FaqSection/>
       <CallToAction/>
       <Footer/>
     </div>
