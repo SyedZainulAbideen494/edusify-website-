@@ -1,62 +1,41 @@
 /* FAQ Section Styling */
 .faq__Faq__page {
-    background: linear-gradient(135deg, #ff6a00, #ee0979); /* Vibrant gradient background */
-    padding: 50px 20px;
+    padding: 50px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 600px;
     border-radius: 15px;
-    background-size: 400% 400%; /* Animation effect for gradient */
-    animation: gradientBG 10s ease infinite;
-  }
-  
-  @keyframes gradientBG {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
   }
   
   .faq__Faq__page__container {
     width: 100%;
     max-width: 1000px;
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    background: #fff;
     border-radius: 12px;
     padding: 40px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     text-align: center;
-    backdrop-filter: blur(10px); /* Blurs the background behind the container */
   }
   
   .faq__Faq__page__title {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #333;
     margin-bottom: 30px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    background: -webkit-linear-gradient(45deg, #ff6a00, #ee0979);
-    -webkit-background-clip: text;
-    color: transparent;
+    letter-spacing: 0.5px;
   }
   
   .faq__Faq__page__item {
-    background-color: #ffffff;
+    background-color: #f9f9f9;
     margin-bottom: 15px;
     border-radius: 8px;
     overflow: hidden;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
   
   .faq__Faq__page__item.active {
-    background-color: #f7f7f7; /* Slightly darker for active items */
+    background-color: #e9e9ff; /* Highlight active item */
   }
   
   .faq__Faq__page__header {
@@ -65,24 +44,22 @@
     padding: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background-color: #ff6a00; /* Accent color for the header */
-    color: #fff;
-    border-bottom: 2px solid #ee0979;
   }
   
   .faq__Faq__page__header:hover {
-    background-color: #ee0979;
+    background-color: #f0f0f0;
   }
   
   .faq__Faq__page__icon {
     font-size: 1.5rem;
-    color: #fff;
+    color: #2563eb;
     margin-right: 15px;
   }
   
   .faq__Faq__page__question {
     font-size: 1.2rem;
     font-weight: 600;
+    color: #333;
   }
   
   .faq__Faq__page__answer {
@@ -99,7 +76,6 @@
   
   .faq__Faq__page__answer p {
     margin: 0;
-    line-height: 1.6;
   }
   
   /* Mobile Responsiveness */
@@ -110,7 +86,7 @@
     }
   
     .faq__Faq__page__title {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
     }
   
     .faq__Faq__page__question {
