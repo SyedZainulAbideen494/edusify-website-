@@ -17,7 +17,7 @@
   }
   
   .dark-theme {
-    background-color: #333;
+    background-color: #141414;
     color: #f4f4f4;
   }
   
@@ -25,69 +25,38 @@
     text-align: center;
   }
   
-  .time-display {
-    font-size: 3rem;
+  .timer-display {
+    font-size: 1rem;
     margin: 20px 0;
   }
   
-  .buttons button {
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
+  .buttons__pomodoro_btn {
+    margin-top: 20px; /* Add margin to the top of the container */
+    display: flex;
+    gap: 10px; /* Add spacing between buttons */
+    justify-content: center; /* Align buttons to the start of the container */
   }
   
-  .buttons button:focus {
-    outline: none;
-  }
-  
-  .theme-toggle button {
+  .buttons__pomodoro_btn button {
     font-size: 1rem;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 12px 25px;
+    margin: 0; /* Remove default margins to rely on gap */
     cursor: pointer;
+    border: 1px solid #e0e0e0; /* Subtle border color */
+    border-radius: 25px;
+    background-color: #ffffff; /* Whiter background */
+    color: #333; /* Slightly darker text for contrast */
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
   }
+  
+
   
   /* Light Theme Adjustments */
   .light-theme .back-btn__Pomodoro__new {
     color: #333; /* Dark icon color for light theme */
   }
   
-  /* Dark Theme Adjustments */
-  .dark-theme .back-btn__Pomodoro__new {
-    color: #fff; /* Light icon color for dark theme */
-  }
-  
-  /* Light Theme Adjustments */
-  .light-theme .stats-btn__Pomodoro__new,
-  .light-theme .settings-btn__Pomodoro__new {
-    color: #333; /* Dark icon color for light theme */
-  }
-  
-  /* Dark Theme Adjustments */
-  .dark-theme .stats-btn__Pomodoro__new,
-  .dark-theme .settings-btn__Pomodoro__new {
-    color: #fff; /* Light icon color for dark theme */
-  }
-  
-  /* Session Type Heading (Centered) */
-  .session-type__Pomodoro__new {
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    flex-grow: 1; /* Make the text centered by taking available space */
-  }
-  
-  /* Light Theme Adjustments for Session Type */
-  .light-theme .session-type__Pomodoro__new {
-    color: #333; /* Dark text color for readability */
-  }
-  
-  /* Dark Theme Adjustments for Session Type */
-  .dark-theme .session-type__Pomodoro__new {
-    color: #fff; /* Light text color for readability in dark mode */
-  }
-  
+
   /* Timer styles */
   .timer__pomodoro__new {
     display: flex;
@@ -125,7 +94,7 @@
   /* Timer number inside the circle */
   .timer-number__Pomodoro__new {
     position: absolute;
-    font-size: 3.5rem; /* Slightly smaller font for better balance */
+    font-size: 2rem; /* Slightly smaller font for better balance */
     font-weight: 700;
     font-family: 'San Francisco', sans-serif;
     color: #333; 

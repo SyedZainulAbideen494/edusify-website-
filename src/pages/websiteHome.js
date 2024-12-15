@@ -31,6 +31,7 @@ function HomeWebApp() {
       <HowToStayOrganized/>
       <CtaSection2/>
       <CtaSection7/>
+      <PomodoroTimer/>
       <HowToStudy/>
       <CtaSection3/>
       <CtaSection5/>
