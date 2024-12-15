@@ -13,6 +13,7 @@ import Footer from '../components/Footer';
 import FaqSection from '../components/faqSections';
 import Section1 from '../components/Section1';
 import Testimonials from '../components/Testimonials';
+import FeaturesSectionPersonal from '../components/fetaures-personal';
 
 
 function HomeWebApp() {
@@ -30,6 +31,7 @@ function HomeWebApp() {
       <Section1/>
       <CtaSection6/>
       <Testimonials/>
+      <FeaturesSectionPersonal/>
           <FaqSection/>
       <CallToAction/>
       <Footer/>
