@@ -93,7 +93,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1000;
+    z-index: 500;
     transition: all 0.3s ease-in-out;
     transform: translateY(0);
     box-sizing: border-box;
