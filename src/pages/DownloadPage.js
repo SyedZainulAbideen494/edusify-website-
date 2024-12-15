@@ -8,48 +8,7 @@ const DownloadPage = () => {
     <section className="download__page">
       {/* SEO Meta Tags */}
       <Helmet>
-        <title>Download Edusify - Boost Your Productivity</title>
-        <meta
-          name="description"
-          content="Download Edusify now on Android, iOS, or access the web app. Boost your productivity with task management, flashcards, notes, and more."
-        />
-        <meta name="keywords" content="Edusify, download app, productivity app, study app, Android, iOS, web app, task manager, flashcards, study tools" />
-        
-        {/* Open Graph and Twitter Cards */}
-        <meta property="og:title" content="Download Edusify - Boost Your Productivity" />
-        <meta
-          property="og:description"
-          content="Download Edusify now on Android, iOS, or access the web app. Boost your productivity with task management, flashcards, notes, and more."
-        />
-        <meta property="og:image" content="https://your-image-url.com/edusify-image.jpg" />
-        <meta property="og:url" content="https://edusify.vercel.app/download" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Download Edusify - Boost Your Productivity" />
-        <meta
-          name="twitter:description"
-          content="Download Edusify now on Android, iOS, or access the web app. Boost your productivity with task management, flashcards, notes, and more."
-        />
-        <meta name="twitter:image" content="https://your-image-url.com/edusify-image.jpg" />
-        
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {{
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Download Edusify - Boost Your Productivity",
-            "description": "Download Edusify on Android, iOS, or use the web app to manage your tasks, take notes, and boost productivity.",
-            "url": "https://edusify.vercel.app/download",
-            "mainEntityOfPage": "https://edusify.vercel.app/download",
-            "publisher": {
-              "@type": "Organization",
-              "name": "Edusify",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://your-image-url.com/edusify-logo.jpg"
-              }
-            }
-          }}
-        </script>
+        <title>Download Edusify</title>
       </Helmet>
 
       <div className="download__container">
