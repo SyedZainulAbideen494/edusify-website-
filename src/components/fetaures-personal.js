@@ -6,6 +6,7 @@ import featureImage1 from '../images/personalised-fetaures-img/1.png';
 import featureImage2 from '../images/personalised-fetaures-img/2.png';
 import featureImage3 from '../images/personalised-fetaures-img/3.png';
 import featureImage4 from '../images/personalised-fetaures-img/4.png';
+import Section2 from './section2';
 
 
 
@@ -15,6 +16,7 @@ const FeaturesSectionPersonal = () => {
       <div className="features-images">
         <img src={featureImage1} alt="Feature 1" className="feature-image" />
         <img src={featureImage2} alt="Feature 2" className="feature-image" />
+        <Section2/>
         <img src={featureImage3} alt="Feature 3" className="feature-image" />
         <img src={featureImage4} alt="Feature 3" className="feature-image" />
       </div>
