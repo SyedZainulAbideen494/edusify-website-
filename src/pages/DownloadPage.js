@@ -1,17 +1,26 @@
 import React from 'react';
-import { FaAndroid, FaApple, FaDesktop } from 'react-icons/fa'; // Import the icons from react-icons/fa
+import { FaAndroid, FaApple, FaArrowAltCircleLeft, FaDesktop } from 'react-icons/fa'; // Import the icons from react-icons/fa
 import { Helmet } from 'react-helmet'; // Import Helmet for SEO optimization
 import './DownloadPage.css'; // Ensure you have this CSS file for styles
+import { Link } from 'react-router-dom';
 
 const DownloadPage = () => {
   return (
-    <section className="download__page">
+    <div>
+      <Link to='/'>
+                    <button className='download-page-back-btn'>
+          <FaArrowAltCircleLeft/>
+        </button>
+        </Link>
       {/* SEO Meta Tags */}
       <Helmet>
         <title>Download Edusify</title>
       </Helmet>
+    <section className="download__page">
+
 
       <div className="download__container">
+
         {/* Heading */}
         <div className="download__header">
           <h1 className="download__heading">Download Edusify Now</h1>
@@ -66,6 +75,7 @@ const DownloadPage = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 
