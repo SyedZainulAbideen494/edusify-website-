@@ -18,11 +18,14 @@ import CtaSection7 from '../components/CtaSection7';
 import Section3 from '../components/Section3';
 import AiDemoSection from '../components/AiDemoSection';
 import PomodoroTimer from '../components/PomodoroTimer';
-
+import { Helmet } from 'react-helmet'; // Import Helmet for SEO optimization
 
 function HomeWebApp() {
   return (
     <div className="App">
+            <Helmet>
+        <title>Edusify - all-in-one app for students</title>
+      </Helmet>
       <HeaderSection/>
       <FeaturesSection/>
       <Section3/>
