@@ -1,0 +1,76 @@
+/* CTA Section 7 */
+.cta-section-7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9fafb; /* Light background for clarity */
+    padding: 40px 20px;
+  }
+  
+  .cta-card-7 {
+    position: relative;
+    width: 340px; /* Instagram Story aspect ratio (scaled down) */
+    background: linear-gradient(135deg, #4f46e5, #4338ca); /* Gradient Background */
+    color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Text Styling */
+  .cta-text-7 h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .cta-text-7 p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    opacity: 0.9;
+  }
+  
+  /* Bullet Points Styling */
+  .cta-text-7 ul {
+    text-align: left;
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #f3f4f6;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .cta-text-7 ul li {
+    margin-bottom: 8px;
+  }
+  
+  /* CTA Button */
+  .cta-button-7 .cta-btn-7 {
+    background-color: #ffffff;
+    color: #4f46e5;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+  }
+  
+  .cta-button-7 .cta-btn-7:hover {
+    background-color: #4f46e5;
+    color: #fff;
+    box-shadow: 0px 8px 15px rgba(79, 70, 229, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .cta-button-7 .cta-btn-7:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+  

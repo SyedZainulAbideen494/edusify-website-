@@ -14,6 +14,7 @@ import FaqSection from '../components/faqSections';
 import Section1 from '../components/Section1';
 import Testimonials from '../components/Testimonials';
 import FeaturesSectionPersonal from '../components/fetaures-personal';
+import CtaSection7 from '../components/CtaSection7';
 
 
 function HomeWebApp() {
@@ -24,6 +25,7 @@ function HomeWebApp() {
       <CtaSection1/>
       <HowToStayOrganized/>
       <CtaSection2/>
+      <CtaSection7/>
       <HowToStudy/>
       <CtaSection3/>
       <CtaSection5/>
