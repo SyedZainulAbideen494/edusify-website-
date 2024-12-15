@@ -32,9 +32,10 @@ function HomeWebApp() {
       <CtaSection4/>
       <Section1/>
       <CtaSection6/>
-      <Testimonials/>
       <FeaturesSectionPersonal/>
+      <Testimonials/>
           <FaqSection/>
+  
       <CallToAction/>
       <Footer/>
     </div>
