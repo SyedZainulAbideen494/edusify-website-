@@ -1,0 +1,175 @@
+.ai-demo-section {
+    background-color: #f9f9f9;
+    padding: 10px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .ai-demo-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    min-height: 500px; /* Set the minimum height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Ensure input stays at the bottom */
+    position: relative; /* Make this the reference for the input box */
+  }
+  
+  .ai-demo-container h2 {
+    font-size: 1.4rem;
+    background-image: linear-gradient(45deg, #9b59b6, #84cdfa, #5ad1cd);
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  
+  .ai-demo-container p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centering the chat container */
+    margin-bottom: 20px;
+    width: 100%;
+    flex-grow: 1; /* Allows chat-box to expand and fill the available space */
+  }
+  
+  .chat-box {
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 1px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all messages */
+    justify-content: flex-start; /* Keep messages at the top */
+  }
+  
+  .chat-box .user-message,
+  .chat-box .ai-message {
+    background-color: #e1f5fe;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 12px;
+    margin: 5px 0;
+    max-width: 70%;
+    word-wrap: break-word;
+    align-self: center; /* Center the messages */
+  }
+  
+  .chat-box .ai-message {
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .loading {
+    font-size: 1rem;
+    color: #888;
+  }
+  
+  /* Center the chat input container with margins */
+  .messageBox__ai__loader__light {
+    position: absolute; /* Fix the input box inside the container */
+    bottom: 20px;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    max-width: 350px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+    box-sizing: border-box;
+  }
+  
+  .messageBox__ai__loader__light:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Adjust input field size */
+  .input-group__ai__loader__light {
+    flex: 1;
+  }
+  
+  #messageInput__ai__loader__light {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #333333;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  /* Send button styling */
+  .chat-send-btn__ai__loader__light {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #9b59b6, #84cdfa, #5ad1cd);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    outline: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-send-btn__ai__loader__light:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  .chat-send-btn__ai__loader__light svg path {
+    transition: all 0.3s ease-in-out;
+    stroke: #fff;
+  }
+  
+  .chat-send-btn__ai__loader__light:hover svg path {
+    fill: #fff;
+  }
+  
+  /* Microphone button when listening */
+  .listening__ai__loader__light {
+    fill: #fff;
+  }
+  
+  /* Icon size adjustments for responsiveness */
+  .chat-send-btn__ai__loader__light svg {
+    width: 24px;
+    height: 24px;
+    padding: 5px;
+  }
+  
+  /* Responsive design for mobile */
+  @media (max-width: 600px) {
+    .chat-send-btn__ai__loader__light {
+      width: 35px;
+      height: 35px;
+      padding: 5px;
+    }
+  }
+  

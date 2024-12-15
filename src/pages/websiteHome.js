@@ -16,12 +16,14 @@ import Testimonials from '../components/Testimonials';
 import FeaturesSectionPersonal from '../components/fetaures-personal';
 import CtaSection7 from '../components/CtaSection7';
 import Section3 from '../components/Section3';
+import AiDemoSection from '../components/AiDemoSection';
 
 
 function HomeWebApp() {
   return (
     <div className="App">
       <HeaderSection/>
+      <AiDemoSection/>
       <FeaturesSection/>
       <Section3/>
       <CtaSection1/>
