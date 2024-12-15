@@ -83,7 +83,7 @@ const PomodoroTimer = () => {
     <div className="pmodoro-main-div">
       <div className={`pomodoro-container ${isDarkMode ? "dark-theme" : "light-theme"}`}>
         <div className="timer">
-          <h2>Pomodoro Timer</h2>
+          <h2>Pomodoro Demo</h2>
           <div className="timer__pomodoro__new">
             <div className="circular-timer__Pomodoro__new">
               <svg className="circle__Pomodoro__new" width="200" height="200">
