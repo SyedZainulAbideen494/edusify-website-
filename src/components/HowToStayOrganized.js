@@ -16,7 +16,7 @@ const HowToStayOrganized = () => {
             <p>Start by defining your study goals and tasks using the AI-powered planner.</p>
           </div>
         </div>
-        <div className="how__to__Sec__org__line__connector"></div>
+
         <div className="how__to__Sec__org__step">
           <div className="how__to__Sec__org__step__number">2</div>
           <div className="how__to__Sec__org__step__description">
@@ -24,7 +24,7 @@ const HowToStayOrganized = () => {
             <p>Create flashcards and quizzes instantly from your notes using AI.</p>
           </div>
         </div>
-        <div className="how__to__Sec__org__line__connector"></div>
+  
         <div className="how__to__Sec__org__step">
           <div className="how__to__Sec__org__step__number">3</div>
           <div className="how__to__Sec__org__step__description">
@@ -32,7 +32,6 @@ const HowToStayOrganized = () => {
             <p>Use the AI-powered learning mode to practice and enhance your retention.</p>
           </div>
         </div>
-        <div className="how__to__Sec__org__line__connector"></div>
         <div className="how__to__Sec__org__step">
           <div className="how__to__Sec__org__step__number">4</div>
           <div className="how__to__Sec__org__step__description">
