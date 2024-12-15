@@ -17,16 +17,17 @@ import FeaturesSectionPersonal from '../components/fetaures-personal';
 import CtaSection7 from '../components/CtaSection7';
 import Section3 from '../components/Section3';
 import AiDemoSection from '../components/AiDemoSection';
+import PomodoroTimer from '../components/PomodoroTimer';
 
 
 function HomeWebApp() {
   return (
     <div className="App">
       <HeaderSection/>
-      <AiDemoSection/>
       <FeaturesSection/>
       <Section3/>
       <CtaSection1/>
+      <AiDemoSection/>
       <HowToStayOrganized/>
       <CtaSection2/>
       <CtaSection7/>

@@ -1,0 +1,152 @@
+.pmodoro-main-div {
+    padding: 20px;
+}
+.pomodoro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 20px;
+    border-radius: 25px;
+  }
+  
+  .light-theme {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .dark-theme {
+    background-color: #333;
+    color: #f4f4f4;
+  }
+  
+  .timer {
+    text-align: center;
+  }
+  
+  .time-display {
+    font-size: 3rem;
+    margin: 20px 0;
+  }
+  
+  .buttons button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  .buttons button:focus {
+    outline: none;
+  }
+  
+  .theme-toggle button {
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  /* Light Theme Adjustments */
+  .light-theme .back-btn__Pomodoro__new {
+    color: #333; /* Dark icon color for light theme */
+  }
+  
+  /* Dark Theme Adjustments */
+  .dark-theme .back-btn__Pomodoro__new {
+    color: #fff; /* Light icon color for dark theme */
+  }
+  
+  /* Light Theme Adjustments */
+  .light-theme .stats-btn__Pomodoro__new,
+  .light-theme .settings-btn__Pomodoro__new {
+    color: #333; /* Dark icon color for light theme */
+  }
+  
+  /* Dark Theme Adjustments */
+  .dark-theme .stats-btn__Pomodoro__new,
+  .dark-theme .settings-btn__Pomodoro__new {
+    color: #fff; /* Light icon color for dark theme */
+  }
+  
+  /* Session Type Heading (Centered) */
+  .session-type__Pomodoro__new {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1; /* Make the text centered by taking available space */
+  }
+  
+  /* Light Theme Adjustments for Session Type */
+  .light-theme .session-type__Pomodoro__new {
+    color: #333; /* Dark text color for readability */
+  }
+  
+  /* Dark Theme Adjustments for Session Type */
+  .dark-theme .session-type__Pomodoro__new {
+    color: #fff; /* Light text color for readability in dark mode */
+  }
+  
+  /* Timer styles */
+  .timer__pomodoro__new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Circular timer container */
+  .circular-timer__Pomodoro__new {
+    position: relative;
+    width: 220px; /* Slightly smaller size for a more compact look */
+    height: 220px; /* Ensure circle stays proportional */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Background circle (the unfilled part) */
+  .circle-bg__Pomodoro__new {
+    fill: none;
+    stroke: #e0e0e0;
+    stroke-width: 10px;
+  }
+  
+  /* Progress circle (filled part) */
+  .circle-progress__Pomodoro__new {
+    fill: none;
+    stroke: #333;
+    stroke-width: 10px;
+    stroke-dasharray: 0 565;
+    transition: stroke-dasharray 1s ease-out;
+  }
+  
+  /* Timer number inside the circle */
+  .timer-number__Pomodoro__new {
+    position: absolute;
+    font-size: 3.5rem; /* Slightly smaller font for better balance */
+    font-weight: 700;
+    font-family: 'San Francisco', sans-serif;
+    color: #333; 
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15); /* Softer shadow for the light theme */
+  }
+  
+  /* Dark Theme: Timer number inside the circle */
+  .dark-theme .timer-number__Pomodoro__new {
+    color: #f0f0f0;
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25); /* Subtle shadow for dark theme */
+  }
+  
+  /* Light Theme: Circle Progress */
+  .light-theme .circle-progress__Pomodoro__new {
+    stroke: #333; 
+  }
+  
+  /* Dark Theme: Circle Progress */
+  .dark-theme .circle-progress__Pomodoro__new {
+    stroke: #624EFF; 
+  }
+  
+
+  
