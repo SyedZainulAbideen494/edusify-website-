@@ -33,9 +33,9 @@ const CtaSection3 = () => {
           </ul>
         </div>
         <div className="cta-button__cta__3">
-          <Link to='/get-app'>
+          <a href="https://edusify.vercel.app/download-app">
           <button className="cta-btn__cta__3">Try It Now</button>
-          </Link>
+          </a>
         </div>
       </div>
     </section>
