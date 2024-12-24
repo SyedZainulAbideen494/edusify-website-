@@ -1,5 +1,3 @@
-# Robots.txt for Edusify
 User-agent: *
-Disallow: 
-
+Allow: /
 Sitemap: https://edusify-download.vercel.app/sitemap.xml
