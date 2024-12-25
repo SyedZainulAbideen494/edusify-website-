@@ -11,9 +11,9 @@ const CtaSection5 = () => {
           <p className="cta-subheading-5">
             <span className="cta-stars-5">★★★★★</span> 4.8 rating
           </p>
-          <a href="https://edusify.vercel.app/download-app">
+          <Link to='/get-app'>
           <button className="cta-btn-5">Sign-up for free</button>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

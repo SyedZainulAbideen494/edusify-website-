@@ -10,9 +10,9 @@ const HeaderSection = () => {
     <nav className="navbar">
       <div className="logo"><img src={logo}/></div>
       <div className="nav-links">
-        <a href='https://edusify.vercel.app/download-app'>
+      <Link to='/get-app'>
         <button className="nav-button">Get App</button>
-        </a>
+        </Link>
       {/*  <div className="menu-icon">☰</div>*/} 
       </div>
     </nav>
@@ -39,7 +39,7 @@ const HeaderSection = () => {
         </div>
       </div>
       <div className="button-container__hero">
-        <a href='https://edusify.vercel.app/download-app' style={{textDecoration: 'none'}}>
+      <Link to='/get-app' style={{textDecoration: 'none'}}>
       <button className="btn__website__ehro__get__started__btn">
         <div>GET STARTED</div>
         <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 24 24" fill="none">
@@ -48,7 +48,7 @@ const HeaderSection = () => {
           <path d="M12 4C16.42 4 20 7 20 12C20 17 16.42 20 12 20" stroke="white" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path>
         </svg>
       </button>
-      </a>
+      </Link>
     </div>
     </div>
   </header>
