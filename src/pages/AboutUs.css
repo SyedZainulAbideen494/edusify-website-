@@ -1,0 +1,299 @@
+.about-us-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Hero Section */
+  .about-us-hero {
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: #6e6e73;
+    margin-bottom: 40px;
+  }
+  
+  .hero-image {
+    width: 100%;
+    border-radius: 16px;
+  }
+  
+  /* Mission Section */
+  .mission-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .mission-content {
+    max-width: 800px;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+  }
+  
+  .section-text {
+    font-size: 1.2rem;
+    color: #6e6e73;
+    line-height: 1.6;
+  }
+  
+  /* Features Section */
+  .features-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f5f5f7;
+  }
+  
+  .features-content {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+  }
+  
+  .feature {
+    max-width: 300px;
+    text-align: left;
+  }
+  
+  .feature h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  .feature p {
+    font-size: 1rem;
+    color: #6e6e73;
+    line-height: 1.6;
+  }
+  
+  /* Founder Section */
+  .founder-section {
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    gap: 40px;
+    background-color: #fff;
+  }
+  
+  .founder-image {
+    flex: 1;
+    border-radius: 16px;
+    max-width: 400px;
+    object-fit: cover;
+  }
+  
+  .founder-content {
+    flex: 2;
+  }
+  
+  .founder-content p {
+    font-size: 1.2rem;
+    color: #6e6e73;
+  }
+  
+  /* Testimonials Section */
+  .testimonials-section {
+    text-align: center;
+    padding: 80px 0;
+    background-color: #f5f5f7;
+  }
+  
+  .testimonials-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+  }
+  
+  .testimonial {
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonial p {
+    font-size: 1rem;
+    color: #6e6e73;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial span {
+    font-size: 0.9rem;
+    color: #8e8e93;
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #1c1c1e;
+    color: #fff;
+  }
+  
+  .cta-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .cta-text {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .cta-button {
+    background-color: #0070c9;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Mobile Responsiveness */
+  @media only screen and (max-width: 768px) {
+    .about-us-container {
+      padding: 0 10px;
+    }
+  
+    /* Hero Section */
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+  
+    /* Mission Section */
+    .mission-content {
+      padding: 0 20px;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .section-text {
+      font-size: 1rem;
+    }
+  
+    /* Features Section */
+    .features-content {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .feature {
+      max-width: 90%;
+    }
+  
+    /* Founder Section */
+    .founder-section {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .founder-image {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .founder-content {
+      text-align: center;
+    }
+  
+    /* Testimonials Section */
+    .testimonials-content {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .testimonial {
+      max-width: 90%;
+    }
+  
+    /* CTA Section */
+    .cta-button {
+      padding: 12px 24px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    /* Hero Section */
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  
+    /* Mission Section */
+    .section-title {
+      font-size: 1.8rem;
+    }
+  
+    .section-text {
+      font-size: 0.9rem;
+    }
+  
+    /* Features Section */
+    .feature h3 {
+      font-size: 1.2rem;
+    }
+  
+    .feature p {
+      font-size: 0.9rem;
+    }
+  
+    /* Founder Section */
+    .founder-image {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .founder-content p {
+      font-size: 1rem;
+    }
+  
+    /* CTA Section */
+    .cta-title {
+      font-size: 2rem;
+    }
+  
+    .cta-text {
+      font-size: 1rem;
+    }
+  }
+  
