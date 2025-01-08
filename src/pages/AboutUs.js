@@ -1,10 +1,36 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import "./AboutUs.css";
-import zain from '../images/photo_2_2025-01-07_23-47-34.jpg'
+import zain from "../images/photo_2_2025-01-07_23-47-34.jpg";
 import { Link } from "react-router-dom";
+
 const AboutUs = () => {
   return (
     <div className="about-us-container">
+      <Helmet>
+        <title>About Us</title>
+        <meta
+          name="description"
+          content="Learn about Edusify, the productivity app for students, and meet our founder Syed Zain-ul-Abideen. Discover features that transform learning and testimonials from students."
+        />
+        <meta
+          name="keywords"
+          content="Edusify, student productivity app, study app, Syed Zain-ul-Abideen, AI study tools, flashcards, planner, AI assistant"
+        />
+        <meta name="author" content="Syed Zain-ul-Abideen" />
+        <meta
+          property="og:title"
+          content="About Us - Edusify | Revolutionizing Student Productivity"
+        />
+        <meta
+          property="og:description"
+          content="Discover how Edusify simplifies studying for students worldwide and meet our visionary founder Syed Zain-ul-Abideen."
+        />
+        <meta property="og:image" content={zain} />
+        <meta property="og:url" content="https://edusify-download.vercel.app/about-us" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="about-us-hero">
         <h1 className="hero-title">Edusify</h1>
@@ -44,13 +70,12 @@ const AboutUs = () => {
 
       {/* Founder Story Section */}
       <section className="founder-section">
-      <img
-  src={zain}
-  alt="Founder Syed Zain-ul-Abideen, the creator of Edusify, a productivity app for students, founder of edusify, edusify founder"
-  title="Founder - Syed Zain-ul-Abideen"
-  className="founder-image"
-/>
-
+        <img
+          src={zain}
+          alt="edusify founder"
+          title="Founder - Syed Zain-ul-Abideen"
+          className="founder-image"
+        />
         <div className="founder-content">
           <h2 className="section-title">Meet Our Founder</h2>
           <p className="section-text">
@@ -90,8 +115,8 @@ const AboutUs = () => {
           Join thousands of students already transforming their learning
           experience with Edusify.
         </p>
-        <Link to='/get-app'>
-        <button className="cta-button">Get Started</button>
+        <Link to="/get-app">
+          <button className="cta-button">Get Started</button>
         </Link>
       </section>
     </div>
