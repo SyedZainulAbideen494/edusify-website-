@@ -24,7 +24,6 @@ const FeaturesSection = () => {
         <img src={featureImage5} alt="Feature 3" className="feature-image" />
         <img src={featureImage6} alt="Feature 3" className="feature-image" />
         <img src={featureImage7} alt="Feature 3" className="feature-image" />
-        <img src={zain} alt="Feature 3" className="feature-image" style={{display: 'none'}}/>
       </div>
     </section>
   );
