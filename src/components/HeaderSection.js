@@ -28,10 +28,10 @@ const HeaderSection = () => {
       <div className="user-stats">
         <div className="user-images">
           {/* Dummy User Avatars */}
-          <img src="https://i.pravatar.cc/40?img=1" alt="User 1" />
-          <img src="https://i.pravatar.cc/40?img=2" alt="User 2" />
-          <img src="https://i.pravatar.cc/40?img=3" alt="User 3" />
-          <img src="https://i.pravatar.cc/40?img=4" alt="User 4" />
+          <img src="https://srv594954.hstgr.cloud/1730470065817.jpg" alt="User 1" />
+          <img src="https://srv594954.hstgr.cloud/1738270237274.jpg" alt="User 2" />
+          <img src="https://srv594954.hstgr.cloud/1731370212317.jpg" alt="User 3" />
+          <img src="https://srv594954.hstgr.cloud/1734504401466.jpg" alt="User 4" />
         </div>
         <div className="stats-text">
           <strong>300,000 +</strong> <br />
