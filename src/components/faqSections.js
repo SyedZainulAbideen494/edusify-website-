@@ -31,7 +31,7 @@ const FaqSection = () => {
     {
       question: "Is Edusify free?",
       answer:
-        "Yes, Edusify is completely free to use. We are currently offering all features for free and will introduce premium options in the future.",
+        "Yes, Edusify is completely free to use! All of our core features are available at no cost, and we’re proud to offer a lot of value for free. However, we also have a premium version available that unlocks even more powerful tools—designed to help you study smarter. Don’t worry, it’s very affordable, ensuring you get top-notch study resources without a hefty price tag. So, whether you’re using the free version or exploring the premium one, Edusify has something amazing for everyone!",
     },
     {
       question: "How can I contact support?",
@@ -52,7 +52,7 @@ const FaqSection = () => {
     {
       question: "Will there be a premium version of Edusify?",
       answer:
-        "Currently, Edusify is completely free to use. We plan to introduce a premium version with additional features in the future, but for now, all features are available to everyone at no cost.",
+        "Yes, Edusify does have a premium version that offers additional features. However, we’ve made sure it’s very affordable, keeping in mind the price sensitivity of our users. The premium version offers enhanced tools and more customization options, but the core features are still available for free to everyone.",
     },
     {
       question: "Can I share my notes with others?",
