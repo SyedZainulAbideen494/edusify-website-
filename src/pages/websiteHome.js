@@ -55,27 +55,32 @@ function HomeWebApp() {
 
   if (isInAppBrowser) {
     return (
-      <div style={{ textAlign: "center", padding: "20px", background: "#ffcccb" }}>
-        <p>Redirecting you to your default browser...</p>
-        {/* Downloadable Link */}
-        <a
-          ref={downloadRef}
-          href={currentUrl}
-          download="Edusify.html"
-          style={{
-            display: "inline-block",
-            marginTop: "10px",
-            padding: "10px 15px",
-            backgroundColor: "#28a745",
-            color: "#fff",
-            borderRadius: "5px",
-            textDecoration: "none",
-            fontSize: "16px",
-          }}
-        >
-          Download Link
-        </a>
-      </div>
+<div className="App">
+      <Helmet>
+        <title>Edusify - All-in-One App for Students</title>
+      </Helmet>
+
+      <HeaderSection />
+      <FeaturesSection />
+      <Section3 />
+      <CtaSection1 />
+      <AiDemoSection />
+      <HowToStayOrganized />
+      <CtaSection2 />
+      <CtaSection7 />
+      <PomodoroTimer />
+      <HowToStudy />
+      <CtaSection3 />
+      <CtaSection5 />
+      <CtaSection4 />
+      <Section1 />
+      <CtaSection6 />
+      <FeaturesSectionPersonal />
+      <Testimonials />
+      <FaqSection />
+      <CallToAction />
+      <Footer />
+    </div>
     );
   }
 
