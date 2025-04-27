@@ -20,6 +20,7 @@ import CtaSection7 from "../components/CtaSection7";
 import Section3 from "../components/Section3";
 import AiDemoSection from "../components/AiDemoSection";
 import PomodoroTimer from "../components/PomodoroTimer";
+import NavigationBar from "../components/headerFloating";
 
 function HomeWebApp() {
   const [isInAppBrowser, setIsInAppBrowser] = useState(false);
@@ -59,8 +60,7 @@ function HomeWebApp() {
       <Helmet>
         <title>Edusify - All-in-One App for Students</title>
       </Helmet>
-
-      <HeaderSection />
+¸      <HeaderSection />
       <FeaturesSection />
       <Section3 />
       <CtaSection1 />
@@ -89,7 +89,7 @@ function HomeWebApp() {
       <Helmet>
         <title>Edusify - All-in-One App for Students</title>
       </Helmet>
-
+      <NavigationBar/>
       <HeaderSection />
       <FeaturesSection />
       <Section3 />
