@@ -26,7 +26,7 @@ const HeaderSection = () => {
         </div>
         <div className="button-container__hero">
           <Link to="/get-app" style={{ textDecoration: 'none' }}>
-            <button className="glass-button">
+            <button className="glass-button pulse-on-hover">
               Get the App
             </button>
           </Link>
