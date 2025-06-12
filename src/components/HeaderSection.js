@@ -21,7 +21,7 @@ const HeaderSection = () => {
             <img src="https://srv594954.hstgr.cloud/1734504401466.jpg" alt="User 4" />
           </div>
           <div className="stats-text">
-            Trusted by <strong>300,000+</strong> students globally.
+            Trusted by <strong>3,000,000+</strong> students globally.
           </div>
         </div>
         <div className="button-container__hero">
